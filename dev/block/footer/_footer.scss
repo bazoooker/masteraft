@@ -1,0 +1,23 @@
+.footer {
+	flex: none;
+	width: 100%;
+	background-image: url(/img/bg/12-footer/bg-footer-filled.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	&__links {
+		padding: 70px 0;		
+		border-bottom: 1px solid rgba(255,255,255,.4);
+	}
+	&__link{
+		display: block;
+		padding: 6px 0;
+		color: #fff;
+	}
+		&__link:visited,
+		&__link:active {color: #fff;}
+	&__legal {
+		padding: 30px 0;
+		@include flex-row(nowrap,space-between,center);
+	}
+	
+}

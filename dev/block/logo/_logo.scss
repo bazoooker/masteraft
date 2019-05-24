@@ -1,0 +1,16 @@
+
+.logo {
+	display: inline-block;
+	height: 100%;
+	text-decoration: none;
+	background-image: url(/img/logo.svg); 
+	@include bg-contain;
+
+	&_header {
+		flex: 0 0 313px;
+		max-width: 180px; /*IE*/
+		margin: 0 170px 0 0;
+	}
+	&_header-sticky {}
+}
+@media screen and (max-width: 992px) {}

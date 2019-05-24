@@ -1,0 +1,71 @@
+.inner-page {
+	.hero {}
+	.header {}
+
+	h1 {
+		margin: 40px 0 45px 0;
+	}
+}
+
+.h-bg-wave {
+	background-image: url(/img/bg/3-numbers/bg-nums-wave.svg);
+	background-size: contain;
+	background-position: top center;
+	background-repeat: no-repeat;
+}
+
+.h-bg-footer {
+	background-image: url(/img/bg/11-gallery/bg-gallery.svg);
+	background-size: contain;
+	background-position: bottom center;
+	background-repeat: no-repeat;
+}
+
+.img-resp {
+	width: 100%;
+	height: auto;
+}
+
+.mb-0 	{margin-bottom: 0px !important;}
+.mb-10 	{margin-bottom: 10px !important;}
+.mb-20 	{margin-bottom: 20px !important;}
+.mb-30 	{margin-bottom: 30px !important;}
+.mb-40 	{margin-bottom: 40px !important;}
+.mb-60 	{margin-bottom: 60px !important;}
+.mb-80 	{margin-bottom: 80px !important;}
+.mb-100 {margin-bottom: 100px !important;}
+.mb-200 {margin-bottom: 200px !important;}
+
+.pb-40 {padding-bottom: 40px !important;}
+.pb-140 {padding-bottom: 140px !important;}
+
+    @media screen and (max-width: 768px) {
+		// .mb-20 	{margin-bottom: 15px !important;}
+		.mb-30 	{margin-bottom: 25px !important;}
+		.mb-40 	{margin-bottom: 30px !important;}
+		.mb-60 	{margin-bottom: 45px !important;}
+		.mb-80 	{margin-bottom: 60px !important;}
+		.mb-100 {margin-bottom: 80px !important;}
+		.mb-200 {margin-bottom: 165px !important;}
+		.pb-140 {padding-bottom: 105px !important;}
+    }
+    @media screen and (max-width: 568px) {
+		// .mb-20 	{margin-bottom: 10px !important;}
+		.mb-30 	{margin-bottom: 20px !important;}
+		.mb-40 	{margin-bottom: 25px !important;}
+		.mb-60 	{margin-bottom: 35px !important;}
+		.mb-80 	{margin-bottom: 45px !important;}
+		.mb-100 {margin-bottom: 60px !important;}
+		.mb-200 {margin-bottom: 135px !important;}
+		.pb-140 {padding-bottom: 80px !important;}
+    }
+    @media screen and (max-width: 413px) {
+		// .mb-20 	{margin-bottom: 10px !important;}
+		.mb-30 	{margin-bottom: 15px !important;}
+		.mb-40 	{margin-bottom: 20px !important;}
+		.mb-60 	{margin-bottom: 30px !important;}
+		.mb-80 	{margin-bottom: 40px !important;}
+		.mb-100 {margin-bottom: 50px !important;}
+		.mb-200 {margin-bottom: 100px !important;}
+		.pb-140 {padding-bottom: 55px !important;}
+    }

@@ -1,0 +1,29 @@
+.gallery {
+	@include flex-row(nowrap,center,center);
+	position: relative;
+	&::before {
+		@include pseudo;
+		width: 100%;
+		height: 350px;
+		top: -350px;
+		left: 0;
+		z-index: -1;
+		background-image: url(/img/bg/11-gallery/bg-gallery_top-dark.png);
+		background-size: cover;
+		background-position: bottom center;
+		background-repeat: no-repeat;
+
+	}
+	&::after {
+		@include pseudo;
+		width: 100%;
+		height:300px;
+		z-index: -2;
+		top: -375px;
+		left: 0;
+		background-image: url(/img/bg/11-gallery/bg-gallery_top-bright.png);
+		background-size: cover;
+		background-position: bottom center;
+		background-repeat: no-repeat;
+	}
+}
