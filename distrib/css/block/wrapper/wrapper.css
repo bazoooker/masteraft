@@ -1,4 +1,4 @@
-.page-wrapper {
+.wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -11,5 +11,5 @@
   overflow-x: hidden; }
 
 @media screen and (max-width: 768px) {
-  .page-wrapper {
+  .wrapper {
     padding-top: 60px; } }
