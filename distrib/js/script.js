@@ -149,6 +149,40 @@ $(document).ready(function(){
 
 
 
+    // --------------------
+    // icon-text hover
+    $('.js-icon-text-hover').mouseenter(function() {
+        $(this).addClass('icon-text_active');
+    });
+
+    $('.js-icon-text-hover').mouseleave(function() {
+        $(this).removeClass('icon-text_active');
+    })
+    // --------------------
+
+
+
+
+
+    // --------------------
+    // аккордеоны
+    $('.js-accordeon').click(function() {
+        console.log('hello');
+        let accordIsOpen = $(this).parent().hasClass('accordeon_active');
+        if(accordIsOpen) {
+            $(this).parent().removeClass('accordeon_active');
+            $(this).parent().find('.accordeon__content').slideUp(300);
+        }else {
+            $(this).parent().addClass('accordeon_active');
+            $(this).parent().find('.accordeon__content').slideDown(300);
+        }
+    });
+
+    // --------------------
+
+
+
+
 
 
 

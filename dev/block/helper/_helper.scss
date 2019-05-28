@@ -31,9 +31,33 @@
 	background-repeat: no-repeat;
 }
 
+
+
+
+
+.h-bg-bigwave {
+	position: relative;
+	&::before {
+		@include pseudo;
+		left: 0;
+		top: 0;
+		height: 1800px;
+		width: 100%;
+		background-image: url(/img/bg/6-advant/bg-big-wave_in-advant.png);
+		@include bg-cover;
+		z-index: -5;
+	}
+	&_left::before {}
+	&_right::before {transform: rotateY(180deg);}
+}
+
+
+
+
+
+
 .h-stats-bg {
 	position: relative;
-
 	&__one {
 		position: absolute;
 	    width: 95vw;
@@ -75,7 +99,6 @@
 .pb-140 {padding-bottom: 140px !important;}
 
     @media screen and (max-width: 768px) {
-		// .mb-20 	{margin-bottom: 15px !important;}
 		.mb-30 	{margin-bottom: 25px !important;}
 		.mb-40 	{margin-bottom: 30px !important;}
 		.mb-60 	{margin-bottom: 45px !important;}
