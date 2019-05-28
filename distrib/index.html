@@ -24,6 +24,7 @@
 
         <!-- scripts -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     </head>
 
 
@@ -397,10 +398,14 @@
 
                     <div class="row">
                         <div class="col-4">
-                            <img src="/img/bg/5-stats/diagram.png" alt="" class="img-resp" style="margin-top: 80px">
+                            <div class="chart">
+                                <div class="chart__container" id="donutchart"></div>
+                            </div>
+                            <!-- <img src="/img/bg/5-stats/diagram.png" alt="" class="img-resp" style="margin-top: 80px"> -->
                         </div>
                         <div class="col-8">
                             <div class="map">
+                                <!-- !!! у карты нужно удалить подложку -->
                                 <div class="map__pin map__pin_left">
                                     <i></i>
                                     <span>Москва</span>
@@ -410,11 +415,11 @@
                                     <span>Хабаровск</span>
                                 </div>
                                 <div class="map__line">
-                                    <svg class="" width="100%" height="100%" viewBox="0 0 484 169" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <svg class="" id="my-path" width="100%" height="100%" viewBox="0 0 484 169" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M1 1C97 2.83333 328.2 33.9 483 167.5" stroke="#EE4542" stroke-width="2" stroke-linecap="round" stroke-dasharray="2 8"/>
                                     </svg>
                                 </div>
-                                <div class="map__raft"></div>
+                                <div class="map__raft js-raft-total-distance"></div>
                             </div>
                             <p class="text-big">
                                 Более <span class="text-accent">6 000</span> километров пройдено по реке<br/> нашими рафтами за 2018 год. Это равняется<br/> расстоянию от Москвы до Хабаровска
@@ -422,6 +427,7 @@
                         </div>
                     </div>
                 </div>
+                <button id="anime-boat">Запустить лодку</button>
             </section>
 
 

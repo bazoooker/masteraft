@@ -50,6 +50,14 @@
 
 $(document).ready(function(){
 
+
+
+
+
+
+    // --------------------
+    // анимация фигур
+
     $('.js-animate-shape-on-hover').mouseenter(function() {
 
         // !!! 
@@ -73,6 +81,76 @@ $(document).ready(function(){
             duration: 700,
         });
     });
+    // --------------------
+
+
+
+
+
+
+
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Маршруты на моторных лодках', 6873],
+          ['Пешие маршруты', 2008],
+          ['Конные маршруты', 1683],
+          ['Простые сплавы', 507],
+          ['Солжные рафт-сплавы', 7129]
+        ]);
+
+        var options = {
+          pieHole: 0.6,
+          legend: 'none',
+          backgroundColor: 'none',
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+        chart.draw(data, options);
+      }
+
+
+
+
+
+
+    // --------------------
+    // анимация лодки
+
+    var pathBoat = anime.path('#my-path path');
+
+    // !!! важно
+    // уменьшить дистанци, т.к. лодка заплывает за пин
+
+    $('#anime-boat').click(function() {
+        anime({
+          targets: '.js-raft-total-distance',
+          translateX: pathBoat('x'),
+          translateY: pathBoat('y'),
+          rotate: pathBoat('angle'),
+          easing: 'linear',
+          duration: 6000,
+          begin: function(anim) {
+            console.log('anim begin');
+            // здесь сделать анимацию первого пина карты
+          },
+          complete: function(anim) {
+            console.log('anim end');
+            // анимировать второй пин на карте
+          }
+        });
+    })
+    // --------------------
+
+
+
+
+
+
+
+
 
 
 
