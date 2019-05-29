@@ -3109,6 +3109,14 @@ button.swiper-pagination-bullet {
   background-position: bottom center;
   background-repeat: no-repeat; }
 
+.h-no-scroll {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0; }
+
 .h-bg-bigwave {
   position: relative; }
   .h-bg-bigwave::before {
@@ -3244,6 +3252,17 @@ button.swiper-pagination-bullet {
   background-size: cover;
   background-position: top right;
   background-repeat: no-repeat; }
+  .hero::before {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 10%;
+    width: 236px;
+    height: 530px;
+    background-image: url(/img/bg/1-hero/hero-bg-left-small.svg);
+    background-size: contain;
+    background-position: left center;
+    background-repeat: no-repeat; }
   .hero__slider {
     width: 100%;
     height: 100%; }

@@ -5,6 +5,17 @@
 	background-size: cover;
 	background-position: top right;
 	background-repeat: no-repeat;
+	&::before {
+		@include pseudo;
+		left: 0;
+		top: 10%;
+		width: 236px;
+		height: 530px;
+		background-image: url(/img/bg/1-hero/hero-bg-left-small.svg);
+		background-size: contain;
+		background-position: left center;
+		background-repeat: no-repeat;
+	}
 	&__slider {
 		width: 100%;
 		height: 100%;

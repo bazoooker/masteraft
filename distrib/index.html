@@ -30,6 +30,28 @@
 
     <body class="wrapper">
 
+        <style>
+            .preloader {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: gray;
+                z-index: 9999;
+                display: -webkit-flex;
+                display: -moz-flex;
+                display: -ms-flex;
+                display: -o-flex;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: #40EBD6;
+            }
+        </style>
+
+        <!-- <div class="preloader"></div> -->
+
         <header class="header">
             <div class="container header__wrapper">
                 <a href="/" class="logo logo_header"></a>
@@ -100,24 +122,14 @@
 
 
             <section class="hero">
-                <div class="hero__deco">
-                    <!--  <svg width="100%" height="auto" viewBox="0 0 1798 959" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M821.185 787.791C606.006 778.788 429.859 842.812 268.224 806.798C126.226 775.16 31.5582 685.266 0 655.243V-10H1798V837.81C1787.99 848.313 1727.94 919.706 1585.32 948.85C1309.09 1005.3 1324.46 808.849 821.185 787.791Z" fill="url(#paint0_linear)"/>
-                        <defs>
-                        <linearGradient id="paint0_linear" x1="761.635" y1="-10" x2="761.635" y2="1096.4" gradientUnits="userSpaceOnUse">
-                            <stop stop-color="#3592FF"/>
-                            <stop offset="1" stop-color="#40EBD6"/>
-                        </linearGradient>
-                        </defs>
-                    </svg> -->
-                </div>
+                <!-- <div class="hero__deco"></div> -->
                 <div class="hero__text-slides">
                     <div class="container mb-40">
                         <div class="hero__text-slide hero__text-slide_active" id="text-slide-0">
                             <div class="row">
                                 <div class="col-4">
                                     <h1 class="sea-deco sea-deco_white">Прогулочный сплав</h1>
-                                    <p>Сплав по спокойным участкам реки с преодолением простых препятствий. Осмотр с воды достопримечательностей, таких как Чемальская ГЭС, «Козья тропа», о.Патмос, «Зубы Дракона»</p>
+                                    <p>111 Сплав по спокойным участкам реки с преодолением простых препятствий. Осмотр с воды достопримечательностей, таких как Чемальская ГЭС, «Козья тропа», о.Патмос, «Зубы Дракона»</p>
                                 </div>
                             </div>
                         </div>
@@ -126,7 +138,7 @@
                             <div class="row">
                                 <div class="col-4">
                                     <h1 class="sea-deco sea-deco_white">Сплав по порогам</h1>
-                                    <p>Сплав по спокойным участкам реки с преодолением простых препятствий. Осмотр с воды достопримечательностей, таких как Чемальская ГЭС, «Козья тропа», о.Патмос, «Зубы Дракона»</p>
+                                    <p>222 Сплав по спокойным участкам реки с преодолением простых препятствий. Осмотр с воды достопримечательностей, таких как Чемальская ГЭС, «Козья тропа», о.Патмос, «Зубы Дракона»</p>
                                 </div>
                             </div>
                         </div>
@@ -134,8 +146,8 @@
                             <div class="sea-deco"><span></span></div>
                             <div class="row">
                                 <div class="col-4">
-                                    <h1 class="sea-deco sea-deco_white">Обзорный сплав</h1>
-                                    <p>Сплав по спокойным участкам реки с преодолением простых препятствий. Осмотр с воды достопримечательностей, таких как Чемальская ГЭС, «Козья тропа», о.Патмос, «Зубы Дракона»</p>
+                                    <h1 class="sea-deco sea-deco_white">Обзорная прогулка</h1>
+                                    <p>333 Сплав по спокойным участкам реки с преодолением простых препятствий. Осмотр с воды достопримечательностей, таких как Чемальская ГЭС, «Козья тропа», о.Патмос, «Зубы Дракона»</p>
                                 </div>
                             </div>
                         </div>
@@ -188,7 +200,6 @@
                             </div>
                         </form>    
                     </div>
-
                 </div>
 
                 <div class="swiper-container hero__slider js-hero-slider">
@@ -1817,40 +1828,7 @@ BASKET MODAL
         <!-- <script src="/js/jquery.visible.min.js"></script> -->
 
 
-    <!-- <script>
-        document.addEventListener("DOMContentLoaded", function(event) { 
-          document.getElementById("animate").onclick = function(){
-            var paths = [
-              "M585.5 172C914.3 184.4 874 108.5 974.5 40.5003C1013 -29.4997 1148.5 85.0003 2190.5 321C1232.5 557 1044.5 779.5 1009 818.5C973.5 857.5 873.5 974 463 957C52.5001 940 -55.5 705 26.5 478C108.5 251 399.5 156.5 585.5 172Z",
 
-              "M685.5 172C914.3 189.4 974 108.5 974.5 20.5003C1013 -89.4997 8148.5 85.0003 1190.5 328C1232.5 557 1014.5 779.5 1009 816.5C973.4 857.5 873.5 974 463 938C52.5001 940 -25.5 705 16.5 478C108.5 251 399.5 220.5 685.9 172Z"
-            ];
-
-            var timeline = anime.timeline({ autoplay: true, direction: 'alternate', loop: false });
-
-            timeline
-            .add({
-              targets: '#work-blyat', 
-              translateX: [
-                  { value: 80, duration: 1300, delay: 0 },
-                  { value: 0, duration: 1300 }
-                ],
-              d: [
-                {
-                  value: paths[1],
-                  duration: 1000,
-                  easing: 'easeInOutQuad'
-                },
-                {
-                  value: paths[0],
-                  duration: 1000,
-                  easing: 'easeInOutQuad'
-                }
-              ]
-            });
-          }
-        });
-    </script> -->
 
     </body>
 </html>
