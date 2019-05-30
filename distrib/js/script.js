@@ -122,6 +122,8 @@ $(document).ready(function(){
     // --------------------
     // анимация лодки
 
+
+    // анимация лодки мск-хабаровск
     var pathBoat = anime.path('#my-path path');
 
     // !!! важно
@@ -145,6 +147,28 @@ $(document).ready(function(){
           }
         });
     })
+
+
+
+    // анимация лодки по большой волне
+    // var pathBoatWave = anime.path('#pathForFloatingBoat path');
+
+    // $('#big-anime-boat').click(function() {
+    //     anime({
+    //       targets: '.js-raft-float',
+    //       translateX: pathBoatWave('x'),
+    //       translateY: pathBoatWave('y'),
+    //       rotate: pathBoatWave('angle'),
+    //       easing: 'linear',
+    //       duration: 10000,
+    //       begin: function(anim) {
+    //         console.log('anim begin');
+    //       },
+    //       complete: function(anim) {
+    //         console.log('anim end');
+    //       }
+    //     });
+    // })
     // --------------------
 
 
@@ -181,6 +205,92 @@ $(document).ready(function(){
         }
     });
 
+    // --------------------
+
+
+
+
+    // --------------------
+    // табы
+
+    // нажатие на табы
+    $('.js-tab-link').click(function() {
+        var targetTab = $(this).data('target');
+        var allSlidesInParent = $(this).parent().parent().find('.tab-slide');
+        var slideToShow = $(allSlidesInParent).eq(targetTab-1);
+
+        // цвета табов
+        $(this).parent().find('.tab-link_active').removeClass('tab-link_active');
+        $(this).addClass('tab-link_active');
+
+        // поялвение контента
+        $(allSlidesInParent).addClass('tab-slide_hidden');
+        $(slideToShow).removeClass('tab-slide_hidden');
+    });
+
+
+    // нажатие на стрелки
+    // листание табов вперед
+    $('.js-tabs-nav-next').click(function() {
+        let tabsTarget = $(this).data('tabs-target');
+        let currentActiveTab = $('#'+tabsTarget).find('.tab-link_active').index();
+
+        console.log(currentActiveTab);
+        if(currentActiveTab > 1) { //переход с третьего таба на первый
+            // цвета табов
+            $('#'+tabsTarget).find('.tab-link').eq(0).addClass('tab-link_active');
+            $('#'+tabsTarget).find('.tab-link').eq(currentActiveTab).removeClass('tab-link_active');
+
+
+            // появление контента
+           var allSlidesInParent = $('#'+tabsTarget).find('.tab-slide');
+           var slideToShow = $('#'+tabsTarget).find('.tab-slide').eq(0);
+           $(allSlidesInParent).addClass('tab-slide_hidden');
+           $(slideToShow).removeClass('tab-slide_hidden');
+
+        } else {
+            // цвета табов
+            $('#'+tabsTarget).find('.tab-link').eq(currentActiveTab+1).addClass('tab-link_active');
+            $('#'+tabsTarget).find('.tab-link').eq(currentActiveTab).removeClass('tab-link_active');
+            // появление контента
+            var allSlidesInParent = $('#'+tabsTarget).find('.tab-slide');
+            var slideToShow = $('#'+tabsTarget).find('.tab-slide').eq(currentActiveTab+1);
+            $(allSlidesInParent).addClass('tab-slide_hidden');
+            $(slideToShow).removeClass('tab-slide_hidden');
+        }
+    });
+
+
+
+
+
+    $('.js-tabs-nav-prev').click(function() {
+        let tabsTarget = $(this).data('tabs-target');
+        let currentActiveTab = $('#'+tabsTarget).find('.tab-link_active').index();
+
+        console.log(currentActiveTab);
+        if(currentActiveTab < 1) {
+            // цвета табов
+            $('#'+tabsTarget).find('.tab-link').eq(2).addClass('tab-link_active');
+            $('#'+tabsTarget).find('.tab-link').eq(currentActiveTab).removeClass('tab-link_active');
+
+            // появление контента
+            var allSlidesInParent = $('#'+tabsTarget).find('.tab-slide');
+            var slideToShow = $('#'+tabsTarget).find('.tab-slide').eq(currentActiveTab+2);
+            $(allSlidesInParent).addClass('tab-slide_hidden');
+            $(slideToShow).removeClass('tab-slide_hidden');
+        } else {
+            // цвета табов
+            $('#'+tabsTarget).find('.tab-link').eq(currentActiveTab-1).addClass('tab-link_active');
+            $('#'+tabsTarget).find('.tab-link').eq(currentActiveTab).removeClass('tab-link_active');
+
+            // появление контента
+            var allSlidesInParent = $('#'+tabsTarget).find('.tab-slide');
+            var slideToShow = $('#'+tabsTarget).find('.tab-slide').eq(currentActiveTab-1);
+            $(allSlidesInParent).addClass('tab-slide_hidden');
+            $(slideToShow).removeClass('tab-slide_hidden');
+        }
+    });
     // --------------------
 
 

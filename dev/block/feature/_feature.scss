@@ -14,6 +14,7 @@
 	}
 	&__bg {
 		position: absolute;
+		z-index: -1;
 		&.feature__bg_left {
 			top: 0px;
 			left: -10px;
@@ -28,3 +29,4 @@
 		}
 	}
 }
+

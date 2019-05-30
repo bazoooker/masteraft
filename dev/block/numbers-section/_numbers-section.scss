@@ -1,0 +1,31 @@
+.numbers-section {
+	position: relative;
+}
+.numbers-section__path {
+    position: absolute;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    top: 79%;
+    width: 100%;
+    height: auto;
+    z-index: -2;
+}
+.number-section__floating-boat {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 50px;
+	height: 50px;
+	background: red;
+}
+
+.numbers-section__boat {
+	position: absolute;
+    bottom: 25%;
+    left: 30%;
+	width: 78px;
+	height: 44px;
+	background-image: url(/img/icons/boat-blue.svg);
+	@include bg-contain;
+}
