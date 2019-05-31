@@ -3,12 +3,13 @@
 }
 .numbers-section__path {
     position: absolute;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    top: 79%;
-    width: 100%;
-    height: auto;
+    // width: 1202px;
+    // height: 284px;
+    width: 2000px;
+    height: 374px;
+    left: 0%;
+    top: 0%;
+    // transform: translateX(-50%);
     z-index: -2;
 }
 .number-section__floating-boat {
@@ -21,11 +22,13 @@
 }
 
 .numbers-section__boat {
-	position: absolute;
-    bottom: 25%;
-    left: 30%;
-	width: 78px;
-	height: 44px;
-	background-image: url(/img/icons/boat-blue.svg);
-	@include bg-contain;
+    position: absolute;
+    top: -71px;
+    left: -32px;
+    width: 76px;
+    height: 76px;
+    // background-color: red;
+    background-image: url(/img/icons/boat-blue.svg);
+    @include bg-contain;
+    transform: rotate(20deg);
 }

@@ -1,11 +1,59 @@
 
-// $(window).scroll(function() {
-//     $('.js-fancy-heading').each(function() {
-//         if( $(this).visible(true) ) {  
-//             $(this).addClass('lines-added')
-//         }        
-//     });
-// });
+$(window).scroll(function() {
+
+
+    $('.js-trigger-boat').each(function() {
+        if( $(this).visible(true) ) {
+            if(!$('.js-trigger-boat').hasClass('triggered')) {
+                $('.js-trigger-boat').addClass('triggered');
+                var pathBoatWave = anime.path('#pathForFloatingBoat path');
+                console.log('trigger!');
+                anime({
+                    targets: '.js-raft-float',
+                    translateX: pathBoatWave('x'),
+                    translateY: pathBoatWave('y'),
+                    rotate: pathBoatWave('angle'),
+                    easing: 'linear',
+                    duration: 10000,
+                    begin: function(anim) {
+                        console.log('anim begin');
+                    },
+                    complete: function(anim) {
+                        $('.js-trigger-boat').removeClass('triggered');
+                    }
+                }) 
+            }
+        }        
+    });
+
+    // $('.js-trigger-map-boat').each(function() {
+    //     if( $(this).visible(true) ) {
+    //         if(!$('.js-trigger-map-boat').hasClass('triggered')) {
+    //             $('.js-trigger-map-boat').addClass('triggered');
+    //             var pathBoatMapWave = anime.path('#pathForMapBoat path');
+    //             console.log('trigger!');
+    //             anime({
+    //                 targets: '.js-raft-float',
+    //                 translateX: pathBoatWave('x'),
+    //                 translateY: pathBoatWave('y'),
+    //                 rotate: pathBoatWave('angle'),
+    //                 easing: 'linear',
+    //                 duration: 10000,
+    //                 begin: function(anim) {
+    //                     console.log('anim begin');
+    //                 },
+    //                 complete: function(anim) {
+    //                     $('.js-trigger-boat').removeClass('triggered');
+    //                 }
+    //             }) 
+    //         }
+    //     }        
+    // });
+
+
+});
+
+
 
 
         // document.addEventListener("DOMContentLoaded", function(event) { 
@@ -53,10 +101,9 @@
 
 $(document).ready(function(){
 
-
-
-
-
+    new WOW().init();
+    $.stellar();
+    $('.js-mask-tel').mask('+7 (999) 999-99-99');
 
     // --------------------
     // анимация фигур
@@ -84,10 +131,17 @@ $(document).ready(function(){
             duration: 700,
         });
     });
+
     // --------------------
 
 
 
+    $('.js-made-by-anim').on('mouseenter', function() {
+        $(this).addClass('made-by_active');
+    });
+    $('.js-made-by-anim').on('mouseleave', function() {
+        $(this).removeClass('made-by_active');
+    })
 
 
 
@@ -147,28 +201,38 @@ $(document).ready(function(){
           }
         });
     })
+// var path = anime.path('.motion-path-demo path');
 
+// anime({
+//   targets: '.motion-path-demo .el',
+//   translateX: path('x'),
+//   translateY: path('y'),
+//   rotate: path('angle'),
+//   easing: 'linear',
+//   duration: 2000,
+//   loop: true
+// });
 
 
     // анимация лодки по большой волне
-    // var pathBoatWave = anime.path('#pathForFloatingBoat path');
+    var pathBoatWave = anime.path('#pathForFloatingBoat path');
 
     // $('#big-anime-boat').click(function() {
-    //     anime({
-    //       targets: '.js-raft-float',
-    //       translateX: pathBoatWave('x'),
-    //       translateY: pathBoatWave('y'),
-    //       rotate: pathBoatWave('angle'),
-    //       easing: 'linear',
-    //       duration: 10000,
-    //       begin: function(anim) {
-    //         console.log('anim begin');
-    //       },
-    //       complete: function(anim) {
-    //         console.log('anim end');
-    //       }
-    //     });
-    // })
+        anime({
+          targets: '.js-raft-float',
+          translateX: pathBoatWave('x'),
+          translateY: pathBoatWave('y'),
+          rotate: pathBoatWave('angle'),
+          easing: 'linear',
+          duration: 6000,
+          begin: function(anim) {
+            console.log('anim begin');
+          },
+          complete: function(anim) {
+            console.log('anim end');
+          }
+        // });
+    })
     // --------------------
 
 
@@ -194,8 +258,9 @@ $(document).ready(function(){
     // --------------------
     // аккордеоны
     $('.js-accordeon').click(function() {
-        console.log('hello');
         let accordIsOpen = $(this).parent().hasClass('accordeon_active');
+        $('.accordeon').removeClass('accordeon_active');
+        $('.accordeon').find('.accordeon__content').slideUp(300);
         if(accordIsOpen) {
             $(this).parent().removeClass('accordeon_active');
             $(this).parent().find('.accordeon__content').slideUp(300);
@@ -342,12 +407,12 @@ $(document).ready(function(){
 
 
 
-    var swiper = new Swiper('.js-feedback-slider', {
+    var swiperFeedback = new Swiper('.js-feedback-slider', {
       slidesPerView: 3,
       spaceBetween: 20,
       navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.feedback-slider__nav .swiper-button-next',
+        prevEl: '.feedback-slider__nav .swiper-button-prev',
       },
     });
 
@@ -362,6 +427,41 @@ $(document).ready(function(){
     // });
 
 
+
+    // function favMsge() {
+    //     var timer;
+    //     $('#success-msg').removeClass('visible');
+    //     clearTimeout(timer);
+
+    //     if ( !$(thisProd).hasClass('product-thumb_in-fav') ) {
+    //         $(thisProd).addClass('product-thumb_in-fav');
+    //         $('#fav-message-add').addClass('visible');
+
+    //         timer = setTimeout( function() {
+    //             $('#fav-message-add').removeClass('visible');
+    //         }, 900);
+    //     }else {
+    //         clearTimeout(timer);
+    //         $(thisProd).removeClass('product-thumb_in-fav');
+    //         $('#fav-message-del').addClass('visible');
+
+    //         timer = setTimeout( function() {
+    //             $('#fav-message-del').removeClass('visible');
+    //         }, 900);
+    //     }
+    // }
+
+        $('.js-show-success-message').click(function() {
+            var timer;
+            $('.message').addClass('message_visible');
+            clearTimeout(timer);
+
+
+            timer = setTimeout( function() {
+                $('.modal').removeClass('modal_active');
+                $('.overlay_modal').fadeOut(400); 
+            }, 2000);
+        });
 
 
 
@@ -448,16 +548,16 @@ $(document).ready(function(){
     // ---------------------------
     // ПРИЛИПАЮЩИЙ ХЕДЕР
 
-    // function showStickyHeader() {
-    //     if ( window.pageYOffset > 293 ) {
-    //        $('.sticky-header').addClass('visible');
-    //     }
-    //     else {
-    //         $('.sticky-header').removeClass('visible');
-    //     }
-    // };
+    function showStickyHeader() {
+        if ( window.pageYOffset > 293 ) {
+           $('.sticky-header').addClass('visible');
+        }
+        else {
+            $('.sticky-header').removeClass('visible');
+        }
+    };
 
-    // $(window).scroll(showStickyHeader); 
+    $(window).scroll(showStickyHeader); 
     // ---------------------------
 
 
@@ -471,27 +571,29 @@ $(document).ready(function(){
 
 
 
-    // $(".js-open-modal").on('click', function(){
+    $(".js-open-modal").on('click', function(e){
+        e.preventDefault();
+        $('.message').removeClass('message_visible');
 
-    //     $('.modal').removeClass('modal_active');
-    //     $('.overlay_modal').fadeOut(400);                          
+        $('.modal').removeClass('modal_active');
+        $('.overlay_modal').fadeOut(400);                          
 
-    //     var modalName = $(this).data('target');                        
-    //     var modal = $('#' + modalName);
+        var modalName = $(this).data('target');                        
+        var modal = $('#' + modalName);
 
-    //     if( !$(modal).hasClass('modal_active') ) {
-    //         $(modal).addClass('modal_active');
-    //         $('.overlay_modal').fadeIn(400);                          
-    //     } else {
-    //         $(modal).removeClass('modal_active');                          
-    //         $('.overlay_modal').fadeOut(400);                          
-    //     }
-    // });
+        if( !$(modal).hasClass('modal_active') ) {
+            $(modal).addClass('modal_active');
+            $('.overlay_modal').fadeIn(400);                          
+        } else {
+            $(modal).removeClass('modal_active');                          
+            $('.overlay_modal').fadeOut(400);                          
+        }
+    });
 
-    // $(".js-close-modal").on('click', function(){
-    //     $('.modal').removeClass('modal_active');
-    //     $('.overlay_modal').fadeOut(400);                          
-    // });
+    $(".js-modal-close").on('click', function(){
+        $('.modal').removeClass('modal_active');
+        $('.overlay_modal').fadeOut(400);                          
+    });
     // ---------------------------
 
 

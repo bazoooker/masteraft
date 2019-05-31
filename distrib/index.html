@@ -180,7 +180,7 @@
                         <p class="text-big color_white mb-40">
                             Вы можете заказать обратный звонок,<br/>и мы сами вам перезвоним
                         </p>
-                        <form class="signup-form" action=''  data-wow-delay="1100ms" data-wow-duration="700ms">
+                        <form class="signup-form" action=''>
                             <div class="row">
                                 <div class="col-3">
                                     <div class="signup-form__label">
@@ -283,22 +283,25 @@
 
             <section class="mb-200 numbers-section">
                 <div class="numbers-section__path">
-                    <span class="numbers-section__boat"></span>
-                    <svg width="100%" height="100%" viewBox="0 0 2476 457" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1 1C72.5472 8.65866 239.3 34.6981 333.936 77.5866C452.229 131.197 538.942 208.262 591.934 274.318C644.925 340.374 682.929 372.445 801.758 387.762C896.821 400.016 1031.92 310.218 1087.59 263.788C1160.92 178.266 1355.22 55.7594 1545.78 249.906C1783.97 492.59 2011.46 486.846 2475 405.473" stroke="#1DB7D9" stroke-width="2" stroke-dasharray="3.5 3.5"/>
-                    </svg>
+                    <span class="numbers-section__boat js-raft-float"></span>
+					<svg id="pathForFloatingBoat" width="2000" height="374" viewBox="0 0 2000 374" preserveAspectRatio='none' fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M-356 1C-256.32 14.3538 -34.159 70.8215 57.048 189.862C171.057 338.662 348.611 373 453.275 373C557.939 373 813.991 338.662 995.284 228.015C1176.58 117.369 1509.26 58.2308 1696.16 281.431C1845.68 459.991 2102.35 307.503 2212 208.938" stroke="#1DB7D9" stroke-width="2" stroke-dasharray="3.5 3.5"/>
+					</svg>
                 </div>
-                <div class="container">
+				
+
+
+                <div class="container js-trigger-boat">
                     <h2 class="mb-80">Мастерафт в цифрах</h2>
                     <div class="row">
                         <div class="col-4">
                             <div class="feature">
-                                <div class="feature__num-holder">
+                                <div class="feature__num-holder wow fadeInUp">
                                     <img class="feature__num" src="/img/bg/3-numbers/17.png" alt="" width="125">
                                     <img class="feature__num-txt" src="/img/bg/3-numbers/years.png" alt="" width="50"> 
                                 </div>
-                                <p class="feature__txt">ораганизуем<br/>сплавы</p>
-                                <div class="feature__bg feature__bg_left">
+                                <p class="feature__txt">организуем<br/>сплавы</p>
+                                <div class="feature__bg feature__bg_left wow fadeInUp" data-wow-delay="200ms">
                                     <svg width="197" height="197" viewBox="0 0 197 197" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M42.9394 62.5333C86.2225 13.117 136.303 34.4846 155.933 51.3454C166.954 60.8112 206.566 95.717 142.797 142.57C63.0863 201.136 -11.1645 124.304 42.9394 62.5333Z" fill="#c2f2fe" fill-opacity="1"/>
                                     </svg>
@@ -309,12 +312,12 @@
                         <div class="col-4">
 
                             <div class="feature">
-                                <div class="feature__num-holder">
+                                <div class="feature__num-holder wow fadeInUp" data-wow-delay="200ms">
                                     <img class="feature__num" src="/img/bg/3-numbers/26.png" alt="" width="150">
                                     <img class="feature__num-txt" src="/img/bg/3-numbers/crew.png" alt="" width="118">
                                 </div>
                                 <p class="feature__txt">работает в нашей<br/>команде</p>
-                                <div class="feature__bg feature__bg_cent">
+                                <div class="feature__bg feature__bg_cent wow fadeInUp" data-wow-delay="400ms">
                                     <svg width="286" height="289" viewBox="0 0 286 289" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M89.7558 58.0489C157.978 32.6378 213.782 71.0217 229.744 94.6606C247.515 117.382 275.353 170.238 244.535 199.892C206.013 236.961 152.92 247.502 94.5152 224.696C36.1102 201.891 -2.34426 92.354 89.7558 58.0489Z" fill="#dfffec" fill-opacity="1"/>
                                     </svg>
@@ -325,12 +328,12 @@
                         <div class="col-4">
 
                             <div class="feature">
-                                <div class="feature__num-holder">
+                                <div class="feature__num-holder wow fadeInUp" data-wow-delay="400ms">
                                     <img class="feature__num" src="/img/bg/3-numbers/11.png" alt="" width="108">
                                     <img class="feature__num-txt" src="/img/bg/3-numbers/boats.png" alt="" width="82">
                                 </div>
                                 <p class="feature__txt">для комфортного<br/>отдыха</p>
-                                <div class="feature__bg feature__bg_right">
+                                <div class="feature__bg feature__bg_right wow fadeInUp" data-wow-delay="600ms">
                                     <svg width="189" height="170" viewBox="0 0 189 170" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M1 83.4999C-4.6 3.89995 60 -3.66672 93 2.49994C189 9.49989 215.5 115 161 149C106.5 183 8 183 1 83.4999Z" fill="#f4fce0" fill-opacity="1"/>
                                     </svg>
@@ -384,17 +387,7 @@
                                     </svg>
                                 </div>
 
-                                <div class="clipped-img__deco-big clipped-img__deco_goals-small">
-                                    <!-- <svg width="100%" height="100%" viewBox="0 0 974 859" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path id="path_about" class="path-1" d="M956.088 505.54C993.832 340.549 874.913 203.521 835.103 169.605C679.114 36.7091 341.109 4.48975 153.357 177.212C-81.334 393.116 72.2951 666.819 346.005 723.084C619.715 779.349 908.908 711.778 956.088 505.54Z" fill="url(#paint0_linear)"/>
-                                        <path class="path-2" style="visibility: hidden;" d="M3.00008 275.5C28.2001 59.5 255.167 2.50002 365.5 1.00002C436 -6.06222 717 33 696.5 263C680.1 447 547 534.333 482.5 555C244 637.5 -28.4999 545.5 3.00008 275.5Z" fill="url(#paint0_linear)"/>
-                                        <linearGradient id="paint0_linear" x1="90.7486" y1="200.205" x2="763.195" y2="789.242" gradientUnits="userSpaceOnUse">
-                                            <stop stop-color="#5CF0B2" stop-opacity="0.51"/>
-                                            <stop offset="1" stop-color="#FFE49D" stop-opacity="0.42"/>
-                                        </linearGradient>
-                                        </defs>
-                                    </svg> -->
-                                </div>
+                                <div class="clipped-img__deco-big clipped-img__deco_goals-small"></div>
                             </div>
                         </div>
                         <div class="col-6">
@@ -426,8 +419,8 @@
                 
             
             <section class="mb-200">
-                <div class="h-stats-bg__one"></div>
-                <div class="h-stats-bg__two"></div>
+                <div class="h-stats-bg__one" data-stellar-ratio="0.9"></div>
+                <div class="h-stats-bg__two" data-stellar-ratio="0.8"></div>
                 <div class="container">
                     <h2 class="sea-deco sea-deco_dark">Статистика за лето 2018 года</h2>
                     <p class="text-big mb-80">
@@ -436,28 +429,27 @@
 
                     <div class="row">
                         <div class="col-4">
-                            <div class="chart">
+                            <div class="chart wow fadeInLeftBig" data-wow-delay="600ms">
                                 <div class="chart__container" id="donutchart"></div>
                             </div>
-                            <!-- <img src="/img/bg/5-stats/diagram.png" alt="" class="img-resp" style="margin-top: 80px"> -->
                         </div>
                         <div class="col-8">
-                            <div class="map">
+                            <div class="map wow fadeInUp">
                                 <!-- !!! у карты нужно удалить подложку -->
-                                <div class="map__pin map__pin_left">
+                                <div class="map__pin map__pin_left wow fadeInUp" data-wow-delay="400ms">
                                     <i></i>
                                     <span>Москва</span>
                                 </div>
-                                <div class="map__pin map__pin_right">
+                                <div class="map__pin map__pin_right wow fadeInUp" data-wow-delay="600ms">
                                     <i></i>
                                     <span>Хабаровск</span>
                                 </div>
                                 <div class="map__line">
-                                    <svg class="" id="my-path" width="100%" height="100%" viewBox="0 0 484 169" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <svg class="" id="#pathForMapBoat" width="100%" height="100%" viewBox="0 0 484 169" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M1 1C97 2.83333 328.2 33.9 483 167.5" stroke="#EE4542" stroke-width="2" stroke-linecap="round" stroke-dasharray="2 8"/>
                                     </svg>
                                 </div>
-                                <div class="map__raft js-raft-total-distance"></div>
+                                <div class="map__raft js-raft-total-distance wow fadeInDown" data-wow-delay="1200ms"></div>
                             </div>
                             <p class="text-big">
                                 Более <span class="text-accent">6 000</span> километров пройдено по реке<br/> нашими рафтами за 2018 год. Это равняется<br/> расстоянию от Москвы до Хабаровска
@@ -465,8 +457,6 @@
                         </div>
                     </div>
                 </div>
-                <button id="anime-boat">Запустить лодку</button>
-                
             </section>
 
 
@@ -475,7 +465,7 @@
                     <h2 class="text-center mb-100">Преимущества </h2>
                     <div class="row">
                         <div class="col-3">
-                            <div class="icon-text js-icon-text-hover">
+                            <div class="icon-text wow fadeInUp js-icon-text-hover">
                                 <div class="icon-text__icon">
                                     <span class="icon-text__arc" style="background-image: url(/img/bg/6-advant/ellipse-1.svg);"></span>
                                     <img src="/img/bg/6-advant/advant-icon-1.svg" alt="">
@@ -485,7 +475,7 @@
                             </div>
                         </div>
                         <div class="col-3">
-                            <div class="icon-text js-icon-text-hover">
+                            <div class="icon-text wow fadeInUp js-icon-text-hover" data-wow-delay="200ms">
                                 <div class="icon-text__icon">
                                     <span class="icon-text__arc" style="background-image: url(/img/bg/6-advant/ellipse-2.svg);"></span>
                                     <img src="/img/bg/6-advant/advant-icon-2.svg" alt="">
@@ -495,7 +485,7 @@
                             </div>
                         </div>
                         <div class="col-3">
-                            <div class="icon-text js-icon-text-hover">
+                            <div class="icon-text wow fadeInUp js-icon-text-hover" data-wow-delay="400ms">
                                 <div class="icon-text__icon">
                                     <span class="icon-text__arc" style="background-image: url(/img/bg/6-advant/ellipse-3.svg);"></span>
                                     <img src="/img/bg/6-advant/advant-icon-3.svg" alt="">
@@ -505,7 +495,7 @@
                             </div>
                         </div>
                         <div class="col-3">
-                            <div class="icon-text js-icon-text-hover">
+                            <div class="icon-text wow fadeInUp js-icon-text-hover" data-wow-delay="600ms">
                                 <div class="icon-text__icon">
                                     <span class="icon-text__arc" style="background-image: url(/img/bg/6-advant/ellipse-4.svg);"></span>
                                     <img src="/img/bg/6-advant/advant-icon-4.svg" alt="">
@@ -536,7 +526,7 @@
         <div class="mb-20 text-big">
             <a class="text-accent" href="tel:88002222222">8-800-222-2-222</a>
         </div>
-        <a href="/" class="btn btn_main btn_size-l"><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;&nbsp;Заказать звонок</a>
+        <a class="btn btn_main btn_size-l wow fadeInUp" data-wow-delay="400ms"><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;&nbsp;Заказать звонок</a>
     </div>
 </section>
 
@@ -1018,7 +1008,7 @@
         <h2 class="mb-40">Отзывы</h2>
 
         <!-- Swiper -->
-        <div class="swiper-container js-feedback-slider" style="padding: 5px 5px 5px 5px; margin: 0 -25px;">
+        <div class="swiper-container feedback-slider js-feedback-slider">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <div class="partner-thumb">
@@ -1075,9 +1065,14 @@
                     </div>
                 </div>
             </div>
-            <!-- Add Arrows -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+        </div>
+        <div class="feedback-slider__nav">
+            <div class="swiper-button-prev feedback-slider__nav-btn">
+                <i class="fa fa-chevron-left" aria-hidden="true"></i>
+            </div>
+            <div class="swiper-button-next feedback-slider__nav-btn">
+                <i class="fa fa-chevron-right" aria-hidden="true"></i>
+            </div>
         </div>
 
     </div>
@@ -1093,18 +1088,30 @@
 
     <div class="gallery">
         <div class="gallery-slide gallery-slide_small">
-            <div class="gallery-slide__photo gallery-slide__photo_small" style="background-image: url(/img/bg/galllery-1.jpg);"></div>
-            <div class="gallery-slide__photo gallery-slide__photo_small" style="background-image: url(/img/bg/galllery-2.jpg);"></div>
-        </div>
+            <a href="/img/bg/galllery-1.jpg" class="gallery-slide__photo gallery-slide__photo_small" data-lightbox="g1">
+                <div class="gallery-slide__photo-inner" style="background-image: url(/img/bg/galllery-1.jpg);"></div>
+            </a>
+            <a href="/img/bg/galllery-2.jpg" href="/img/bg/galllery-2.jpg" class="gallery-slide__photo gallery-slide__photo_small" style="background-image: url(/img/bg/galllery-2.jpg);" data-lightbox="g1">
+                <div class="gallery-slide__photo-inner" style="background-image: url(/img/bg/galllery-2.jpg);"></div>
+            </a>
+         </div>
         <div class="gallery-slide gallery-slide_big">
-            <div class="gallery-slide__photo gallery-slide__photo_big" style="background-image: url(/img/bg/galllery-3.jpg);"></div>
+            <a href="/img/bg/galllery-3.jpg" class="gallery-slide__photo gallery-slide__photo_big" style="background-image: url(/img/bg/galllery-3.jpg);" data-lightbox="g1">
+                <div class="gallery-slide__photo-inner" style="background-image: url(/img/bg/galllery-3.jpg);"></div>
+            </a>
         </div>
         <div class="gallery-slide gallery-slide_small">
-            <div class="gallery-slide__photo gallery-slide__photo_small" style="background-image: url(/img/bg/galllery-4.jpg);"></div>
-            <div class="gallery-slide__photo gallery-slide__photo_small" style="background-image: url(/img/bg/galllery-5.jpg);"></div>
+            <a href="/img/bg/galllery-4.jpg" class="gallery-slide__photo gallery-slide__photo_small" style="background-image: url(/img/bg/galllery-4.jpg);" data-lightbox="g1">
+                <div class="gallery-slide__photo-inner" style="background-image: url(/img/bg/galllery-4.jpg);"></div>
+            </a>
+            <a href="/img/bg/galllery-5.jpg" class="gallery-slide__photo gallery-slide__photo_small" style="background-image: url(/img/bg/galllery-5.jpg);" data-lightbox="g1">
+                <div class="gallery-slide__photo-inner" style="background-image: url(/img/bg/galllery-5.jpg);"></div>
+            </a>
         </div>
         <div class="gallery-slide gallery-slide_small">
-            <div class="gallery-slide__photo gallery-slide__photo_small" style="background-image: url(/img/bg/galllery-6.jpg);"></div>
+            <a href="/img/bg/galllery-6.jpg" href="/img/bg/galllery-2.jpg" class="gallery-slide__photo gallery-slide__photo_small" style="background-image: url(/img/bg/galllery-6.jpg);" data-lightbox="g1">
+                <div class="gallery-slide__photo-inner" style="background-image: url(/img/bg/galllery-6.jpg);"></div>
+            </a>
             <div class="gallery-slide__photo gallery-slide__photo_small gallery-slide__btn">
                 <div class="text-center">
                     <span class="color_white text-big">Смотреть еще фото</span><br/>
@@ -1113,8 +1120,12 @@
             </div>
         </div>
         <div class="gallery-slide gallery-slide_small">
-            <div class="gallery-slide__photo gallery-slide__photo_small" style="background-image: url(/img/bg/galllery-8.jpg);"></div>
-            <div class="gallery-slide__photo gallery-slide__photo_small" style="background-image: url(/img/bg/galllery-8.jpg);"></div>
+            <a href="/img/bg/galllery-8.jpg" class="gallery-slide__photo gallery-slide__photo_small" style="background-image: url(/img/bg/galllery-8.jpg);" data-lightbox="g1">
+                <div class="gallery-slide__photo-inner" style="background-image: url(/img/bg/galllery-8.jpg);"></div>
+            </a>
+            <a href="/img/bg/galllery-8.jpg" class="gallery-slide__photo gallery-slide__photo_small" style="background-image: url(/img/bg/galllery-8.jpg);" data-lightbox="g1">
+                <div class="gallery-slide__photo-inner" style="background-image: url(/img/bg/galllery-8.jpg);"></div>
+            </a>
         </div>
     </div>
 
@@ -1229,59 +1240,18 @@ STICKY HEADER
 
 <div class="sticky-header">
     <div class="container">
-
         <a href="/" class="logo logo_white"></a>
-        <span id="catalog-menu-in-sticky-header" class="btn-catalog btn_catalog-gray js-catalog-menu">
-            <span class="i i-burger">
-                <i class="i-burger__bar"></i>
-                <i class="i-burger__bar"></i>
-                <i class="i-burger__bar"></i>
-            </span>
-            <span class="btn-catalog__text">Каталог</span>
-        </span>
+        <nav class="nav">
+            <a href="/" class="nav__link">Услуги</a>
+            <a href="/" class="nav__link">О компании</a>
+            <a href="/" class="nav__link">Преимущества</a>
+            <a href="/" class="nav__link">FAQ</a>
+            <a href="/" class="nav__link">Отзывы</a>
+            <a href="/" class="nav__link">Галерея</a>
+            <a href="/" class="nav__link">Контакты</a>
+        </nav>
+        <a href="" class="btn btn_main btn_size-s js-open-modal" data-target="callback">Заказать звонок</a>
 
-        <div class="search">
-            <div id="title-search">
-                <form action="/catalog/search/" class="search-form">
-                    <input id="title-search-input" type="text" name="q" value="" size="40" maxlength="50" autocomplete="off" placeholder="Искать товар по названию">
-                    </form>
-            </div>
-            </form>
-        </div>
-
-
-        <div class="sticky-header__shop-controls">
-            <a href="#" class="shop-option shop-option_visited">
-                <span class="icon icon_rounded">
-                    <i class="i i-checkmark"></i>
-                </span>
-
-            </a>
-            <a href="#" class="shop-option shop-option_fav-list">
-                <span class="icon icon_rounded">
-                    <i class="i i-star"></i>
-                    <i class="fav-num fav-num_visible">4</i> <!-- класс fav-num_visible для анимации появления/скрытия -->
-                </span>
-
-            </a>
-            <div class="shop-option shop-option_register js-open-modal" data-target="sign-in">
-                <span class="icon icon_rounded">
-                    <i class="i i-lock"></i>
-                </span>
-                <div class="shop-option__link-list">
-                    <!--
-                        <a href="#">Вход в кабинет</a> 
-                        <a href="#">Регистрация</a> 
-                    -->
-                </div>
-            </div>
-            <span class="btn-basket js-basket-controls">
-                <i class="i i-cart">
-                    <span class="i-cart__num">6</span>
-                </i>
-                <i class="btn-basket__total">84 929 Р</i>
-            </span>
-        </div>
     </div>
     <div id="progress"></div>
 </div>
@@ -1324,144 +1294,33 @@ CABINET MODALS
 
 <!-- sign-in -->
 
-<div class="modal" id="sign-in">
-
+<div class="modal" id="callback">
     <div class="modal__wrapper">
-    
-        
         <span class="modal__close js-close-modal"></span>
-        <div class="container">
-
-            <div class="signup__form">
-
-                <div class="caption mb-20">
-                    <h2>Вход в личный кабинет</h2>
-                </div>
-
-                <form class="signup-form" action=''  data-wow-delay="1100ms" data-wow-duration="700ms">
-                    <div class="row">
-                        <div class="col-6">
-                            <div class="signup-form__label">
-                                <input type="text" class="js-floating-label">
-                                <span class="signup-form__floating-placeholder">Электронная почта</span>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="signup-form__label">
-                                <input type="text" class="js-floating-label signup-form__masked-tel">
-                                <span class="signup-form__floating-placeholder">Пароль</span>
-                            </div>
-
-                            <small><a href="javascript:void(0)" class="js-open-modal" data-target="pass-recovery">Забыли пароль?</a></small>
-                        </div>
-                    </div>
-                    
-                    <div class="text-center mb-20">
-                        <a href="#" class="btn btn_main btn_size-l" style="width: 100%;">Войти</a>
-                    </div>
-                    <div class="text-center">
-                        <a href="javascript:void(0)" class="js-open-modal" data-target="registration">Зарегистрироваться</a><br/>
-                        <!-- <small><a href="javascript:void(0)" class="js-open-modal" data-target="pass-recovery">Забыли пароль?</a></small> -->
-                    </div>
-
-                </form>
-                                                    
+        <div class="signup__form">
+            <div class="caption mb-20">
+                <h4 class="text-center">Закажите обратный звонок</h4>
             </div>
+            <form class="signup-form" action=''>
+                <div class="signup-form__label mb-30">
+                    <input type="text" class="js-floating-label">
+                    <span class="signup-form__floating-placeholder">Ваше имя</span>
+                </div>
+                <div class="signup-form__label mb-30">
+                    <input type="text" class="js-floating-label js-mask-tel">
+                    <span class="signup-form__floating-placeholder">Номер телефона</span>
+                </div>
+                <div class="text-center mb-20">
+                    <a href="#" class="btn btn_main btn_size-l js-show-success-message">Заказать звонок</a>
+                </div>
+            </form>
         </div>
     </div>
-</div>
-
-
-
-<!-- registration -->
-
-<div class="modal" id="registration">
-    <div class="modal__wrapper">
-        <span class="modal__close js-close-modal"></span>
-        <div class="container">
-
-            <div class="signup__form">
-
-                <div class="caption mb-20">
-                    <h2>Регистрация</h2>
-                </div>
-
-                <form class="signup-form" action=''  data-wow-delay="1100ms" data-wow-duration="700ms">
-                    <div class="row">
-                        <div class="col-6">
-                            <div class="signup-form__label">
-                                <input type="text" class="js-floating-label">
-                                <span class="signup-form__floating-placeholder">Электронная почта</span>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="signup-form__label">
-                                <input type="text" class="js-floating-label signup-form__masked-tel">
-                                <span class="signup-form__floating-placeholder">Пароль</span>
-                            </div>
-
-                            <!-- <small><a href="#">Забыли пароль?</a></small> -->
-                        </div>
-                    </div>
-                    
-                    <div class="text-center mb-20">
-                        <a href="#" class="btn btn_main btn_size-l" style="width: 100%;">Зарегистрироваться</a>
-                    </div>
-                    <div class="text-center mb-20">
-                        <a href="javascript:void(0)" class="js-open-modal" data-target="sign-in">Я уже зарегистрирован</a>
-                    </div>
-                    <div class="text-center">
-                        <p><small>Регистрируясь на этом сайте вы соглашаетесь с <a href="#">политикой</a> обработки персональных данных.</small></p>
-                    </div>
-
-                </form>
-
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-<!-- pass-recovery -->
-
-<div class="modal" id="pass-recovery">
-    <div class="modal__wrapper">
-        <span class="modal__close js-close-modal"></span>
-        <div class="container">
-
-            <div class="signup__form">
-
-                <div class="caption mb-20">
-                    <h2>Восстановление пароля</h2>
-                </div>
-
-                <form class="signup-form" action=''>
-
-                    <div class="mb-20">
-                        <div class="signup-form__label">
-                            <input type="text" class="js-floating-label">
-                            <span class="signup-form__floating-placeholder">Электронная почта</span>
-                        </div>
-                    </div>
-                    
-                    <div class="mb-20">
-                    <!-- <p> -->
-                        <small class="modal__note mb-20">Укажите электронную почту, которую вы вводили при регистрации или заказе. Мы вышлем на нее инструкции по восстановлению пароля. Обычно письмо с инструкциями приходит в течение нескольких минут.</small>
-                    <!-- </p> -->
-                    </div>
-                    
-                    <div class="text-center mb-20">
-                        <a href="#" class="btn btn_main btn_size-l" style="width: 100%;">Получить инструкции</a>
-                    </div>
-                    <div class="text-center mb-20">
-                        <a href="javascript:void(0)" class="js-open-modal" data-target="sign-in">Вспомнили пароль?</a>
-                    </div>
-
-                </form>
-
-            </div>
-        </div>
+    <div class="message" id="success-msg">
+    	<div class="text-center">
+    		<i class="fa fa-check fa-3x" aria-hidden="true"></i><br/>
+    		<h3 class="color-white">Отправлено!</h3>
+    	</div>
     </div>
 </div>
 
@@ -1498,8 +1357,7 @@ MOBILE MENU
 
 
 
-<div class="menu menu_mobile-menu menu_full-screen" id="mobile-menu">
-<!-- <div class="menu menu_full-screen"> -->
+<div class="menu menu_mobile-menu menu_full-screen" id="mobile-menu" style="display: none;">
     <div class="menu__wrapper">
 
         <header class="menu__header">
@@ -1591,206 +1449,8 @@ MOBILE MENU
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- =========================
-
-CATALOG POP UP MENU
-
-============================-->
-
-
-
-<!-- модалка каталог -->
-<div id="catalog-menu" class="menu menu_full-screen">
-
-    <div class="container">
-        <div class="menu__body">
-            
-        </div>
-    </div>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- =========================
-
-BASKET MODAL
-
-============================-->
-
-
-
-        <!-- модалка корзина -->
-        <div class="basket">
-            <header class="basket__header">
-                <h3><i class="i i-cart_filled">
-                        <span class="i-cart__num">6</span>
-                    </i>
-                    Ваша корзина
-                </h3>
-            </header>
-
-            <div class="basket__product-list">
-
-                <div class="product-modal">  <!--один товар в корзине-модалке начало-->              
-                    <div class="product-modal__info">
-                        <a class="product-modal__name" href="#">
-                            Розетка силовая Glossa 16А 250В IP20 белый, с заземлением Schneider
-                        </a>
-                        <div class="product-modal__controls">
-                            <div class="product-controls-horiz">
-                                    <span class="product-controls-horiz__arrow-left">
-                                        <i class="i i-caret_up"></i>
-                                    </span>
-
-                                    <input id="" type="text" name="quantity" class="product-controls-horiz__quant" value="1">
-
-                                    <span class="product-controls-horiz__arrow-right">
-                                        <i class="i i-caret_down"></i>    
-                                    </span>
-                            </div>
-                            <span class="product-modal__price">920 руб.</span>
-                        </div>
-                    </div>
-                    <a href="#" class="product-modal__img" style="background-image: url(/img/goods/prod-3.jpg);"></a>
-                </div><!--один товар в корзине-модалке конец-->
-
-                <div class="product-modal">  <!--один товар в корзине-модалке начало-->              
-                    <div class="product-modal__info">
-                        <a class="product-modal__name" href="#">
-                            Розетка силовая Glossa 16А 250В IP20 белый, с заземлением Schneider
-                        </a>
-                        <div class="product-modal__controls">
-                            <div class="product-controls-horiz">
-                                    <span class="product-controls-horiz__arrow-left">
-                                        <i class="i i-caret_up"></i>
-                                    </span>
-
-                                    <input id="" type="text" name="quantity" class="product-controls-horiz__quant" value="12">
-
-                                    <span class="product-controls-horiz__arrow-right">
-                                        <i class="i i-caret_down"></i>    
-                                    </span>
-                            </div>
-                            <span class="product-modal__price">1720 руб.</span>
-                        </div>
-                    </div>
-                    <a href="#" class="product-modal__img" style="background-image: url(/img/goods/prod-3.jpg);"></a>
-                </div><!--один товар в корзине-модалке конец-->
-
-                <div class="product-modal">  <!--один товар в корзине-модалке начало-->              
-                    <div class="product-modal__info">
-                        <a class="product-modal__name" href="#">
-                            Розетка силовая Glossa 16А 250В IP20 белый, с заземлением Schneider
-                        </a>
-                        <div class="product-modal__controls">
-                            <div class="product-controls-horiz">
-                                    <span class="product-controls-horiz__arrow-left">
-                                        <i class="i i-caret_up"></i>
-                                    </span>
-
-                                    <input id="" type="text" name="quantity" class="product-controls-horiz__quant" value="492">
-
-                                    <span class="product-controls-horiz__arrow-right">
-                                        <i class="i i-caret_down"></i>    
-                                    </span>
-                            </div>
-                            <span class="product-modal__price">71120 руб.</span>
-                        </div>
-                    </div>
-                    <a href="#" class="product-modal__img" style="background-image: url(/img/goods/prod-3.jpg);"></a>
-                </div><!--один товар в корзине-модалке конец-->
-
-                <div class="product-modal">  <!--один товар в корзине-модалке начало-->              
-                    <div class="product-modal__info">
-                        <a class="product-modal__name" href="#">
-                            Розетка силовая Glossa 16А 250В IP20 белый, с заземлением Schneider
-                        </a>
-                        <div class="product-modal__controls">
-                            <div class="product-controls-horiz">
-                                    <span class="product-controls-horiz__arrow-left">
-                                        <i class="i i-caret_up"></i>
-                                    </span>
-
-                                    <input id="" type="text" name="quantity" class="product-controls-horiz__quant" value="77">
-
-                                    <span class="product-controls-horiz__arrow-right">
-                                        <i class="i i-caret_down"></i>    
-                                    </span>
-                            </div>
-                            <span class="product-modal__price">29 руб.</span>
-                        </div>
-                    </div>
-                    <a href="#" class="product-modal__img" style="background-image: url(/img/goods/prod-3.jpg);"></a>
-                </div><!--один товар в корзине-модалке конец-->
-
-            </div>
-
-            <footer class="basket__footer">
-               <a href="" class="btn btn_main btn_size-l basket__btn">оформить заказ</a>
-               <div class="basket__total">
-                   <span class="basket__note">Итого 7 товаров на сумму</span>
-                   <span class="basket__sum">1620 руб.</span>
-               </div>
-            </footer>
-
-            <div class="basket__btn-close js-basket-controls"></div>
-        </div>
-
-
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
             <!-- хедер для мобилок -->
-            <div class="mobile-header">
+            <div class="mobile-header" style="display: none">
                 <div class="container">
                     <span class="btn-burger js-open-mobile-menu">
                         <i class="btn-burger__bar"></i>
@@ -1819,30 +1479,25 @@ BASKET MODAL
 
 
 
-        
+
+
         <div class="to-top js-scroll-to-top"></div>
 
-        <div class="overlay"></div>
+        <div class="overlay overlay_modal js-modal-close"></div>
 
 
         <!-- scripts -->
         <!-- <script src="/js/modernizr.custom.62035.js" type="text/javascript"></script> -->
 
+        <script src="/js/lightbox.min.js"></script>
+        <script src="/js/jquery.maskedinput.min.js"></script>
         <script src="/js/anime.min.js"></script>
-
-
-<!--         <script src="/js/kute.js"></script>
-        <script src="/js/kute-attr.js"></script>
-        <script src="/js/kute-css.js"></script>
-        <script src="/js/kute-svg.js"></script>
-        <script src="/js/kute-text.js"></script> -->
-
-
         <script src="/js/swiper.min.js"></script>
+        <script src="/js/wow.min.js"></script>
+        <script src="/js/jquery.visible.min.js"></script>
         <script src="/js/script.js"></script>
-        <!-- <script src="/js/ion.rangeSlider.js"></script> -->
+        <script src="/js/jquery.stellar.min.js"></script>
         <!-- <script src="/js/jquery.nice-select.min.js"></script> -->
-        <!-- <script src="/js/jquery.visible.min.js"></script> -->
 
 
 

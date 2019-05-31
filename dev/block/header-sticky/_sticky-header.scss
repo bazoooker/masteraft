@@ -8,17 +8,33 @@
 	right: 0;
 
 	width: 100%;
-	height: 60px;
+	height: 120px;
 
 	background-color: #fff;
-	box-shadow: 0px 0px 18px 1px rgba(0,0,0,.15);
+	padding: 0 0 15px 0;
 	z-index: 9;
-	background-color: $yellow;
-	transition: transform 300ms;
+	background: url(/img/bg/bg-sticky-header.svg);
+	background-size: cover;
+	background-position: bottom center;
+	background-repeat: no-repeat;
+	transition: all 300ms;
+	opacity: 0;
+
+	.btn {
+		width: 210px;
+		flex: 0 0 210px;
+	}
+	.nav {
+		margin: 0 30px 0 0;
+		padding: 0 30px;
+	}
+	.nav__link {
+		font-size: 14px;
+	}
 
 	&.visible{
 		transform: translateY(0);
-		padding-right: 20px;
+		opacity: 1;
 	}
 
 	// padding: 3.1rem 0 5.5rem 0;
@@ -32,7 +48,6 @@
 		    	top: 0%;
 				width: 1500px;
 				height: 60px;
-				background-color: $gray3;
 		    }
 
 
@@ -42,22 +57,19 @@
 
 		.logo {
 			position: relative;
-			width: 140px;
-			flex: 0 0 140px;
+			width: 180px;
+			flex: 0 0 180px;
 			height: 100%;
 			padding: 0 30px 0 0;
 			margin: 0 0 0 0;
 			background-position: left center;
-			background-color: $gray3;
-			background-size: 79%;
+			background-size: 85%;
 			&::before, &::after {display: none;}
 		}
 
 		.btn-catalog {
-			background-color: $gray4;
 			color: #fff;
 		    min-width: 149px;
-			transition: $tr2;
 
 		    &::before {
 		    	@include pseudo;
@@ -71,14 +83,10 @@
 				border-bottom: 2px solid rgba(255,255,255,.85);
 				border-right: 2px solid rgba(255,255,255,.85);
 
-				transition: $tr2;
 				animation-delay: 2s;
 				transition-delay: 2s;
 		    }
 
-		    &:hover {
-				background-color: $black;
-		    }
 		    
 			// ВЕРНУТЬ
 
@@ -94,56 +102,7 @@
 
 
 
-		.btn-basket {
-			position: relative;
-			@include flex-row(nowrap,flex-start,center);
-			padding: 0 15px 0 62px;
-			height: 100%;
-			flex-grow:0;
-			min-width: 178px;
-			cursor: pointer;
 
-			&::after {
-				@include pseudo;
-				bottom: 0;
-				width: 0;
-				right: 0%;
-				height: 5px;
-				background-color: $black;
-				transition: width $tr2;
-			}
-
-			&:hover {
-				&::after {
-					left: 0;
-					right: auto;
-					width: 100%;
-				}
-			}
-
-			.i-cart {
-				left: 20px;
-				top: 50%;
-				transform: translateY(-50%);
-			}
-		}
-		// .btn-basket__text {
-		// 	display: inline-block;
-		// 	margin: 0 8px 0 0;
-		// 	font-weight: 600;
-		// 	font-style:normal;
-		// 	text-transform: uppercase;
-		// 	font-size: 16px;
-		// 	color: black;
-		// }
-
-		// .btn-basket__total {
-		// 	font-weight: 400;
-		// 	font-style:normal;
-		// 	text-transform: uppercase;
-		// 	font-size: 16px;
-		// 	color: black;
-		// }
 		.search { margin: 0 20px 0 0;}
 
 		.shop-option {
@@ -162,8 +121,6 @@
 				width: 0;
 				right: 0%;
 				height: 5px;
-				background-color: $black;
-				transition: width $tr2;
 			}
 
 			&:hover {
@@ -195,7 +152,6 @@
 				height:100%;
 
 				.fav-num {
-					background-color: $black;
 					color: #fff;
 					width: 18px;
 					height: 18px;
@@ -208,14 +164,6 @@
 
 	}
 
-	// #progress {
-	// 	position: absolute;
-	//     bottom: 0px;
-	//     left: 0;
-	//     width: 0%;
-	//     height: 2px;
-	//     background-color: $color_main;
-	// }
 }
 
 .sticky-header__shop-controls {

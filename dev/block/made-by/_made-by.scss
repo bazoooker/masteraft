@@ -49,7 +49,9 @@
             background-repeat: repeat-x;
         }
     }
-    &__txt  {}
+    &__txt  {
+        transition: 0ms !important;
+    }
 }
 
 .made-by.made-by_active {
@@ -61,15 +63,15 @@
     .made-by__icon {
         display: block;
         opacity: 1;
-        animation: made-by-icon 3s linear infinite;
+        animation: made-by-icon 2s linear infinite;
         transition: 450ms;
     }
     .made-by__water {
         display: block;
-        opacity: 0.4;
+        opacity: 0.5;
         transition: 450ms;
         i {
-            animation: made-by-water 30s linear infinite;
+            animation: made-by-water 20s linear infinite;
         }
     }
 }
@@ -82,10 +84,10 @@
         transform: rotate(4deg) translateY(2px);
     }
     20%      {
-        transform: rotate(12deg) translateY(5px);
+        transform: rotate(10deg) translateY(5px);
     }
     30%      {
-        transform: rotate(10deg) translateY(7px);
+        transform: rotate(8deg) translateY(7px);
     }
     40%      {
         transform: rotate(6deg) translateY(8px);
@@ -100,7 +102,7 @@
         transform: rotate(-10deg) translateY(6px);
     }
     80%      {
-        transform: rotate(-9deg) translateY(3px);
+        transform: rotate(-8deg) translateY(3px);
     }
     90%      {
         transform: rotate(-6deg) translateY(1px);
