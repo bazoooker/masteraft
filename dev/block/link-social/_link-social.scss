@@ -1,6 +1,11 @@
 .link-social {
-	// margin: 0 11px;
-	height: 100%;
-	padding: 0 11px;
-	&:hover {background-color: black;}
+	height: 35px;
+    padding: 0 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 40px;
+    max-width: 40px;
+    transition: 300ms;
+	&:hover {background-color: $color_main; transform: translateY(-3px);}
 }

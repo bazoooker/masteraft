@@ -598,6 +598,10 @@ $(document).ready(function(){
 
 
 
+$('.js-show-signup-message-success').on('click', function(){
+    $(this).html('<i class="fa fa-check" aria-hidden="true"></i>&nbsp;&nbsp;Отправлено!')
+});
+
  
     // ---------------------------
     // НАВЕРХ СТРАНИЦЫ

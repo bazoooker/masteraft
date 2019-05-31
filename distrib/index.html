@@ -195,7 +195,9 @@
                                     </div>
                                 </div>
                                 <div class="col-3">
-                                        <input type="submit" class="signup-form__submit" value="Заказать звонок">
+                                        <button type="submit" class="signup-form__submit js-show-signup-message-success">
+                                        	Заказать
+                                        </button>
                                 </div>
                             </div>
                         </form>    
@@ -526,7 +528,7 @@
         <div class="mb-20 text-big">
             <a class="text-accent" href="tel:88002222222">8-800-222-2-222</a>
         </div>
-        <a class="btn btn_main btn_size-l wow fadeInUp" data-wow-delay="400ms"><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;&nbsp;Заказать звонок</a>
+        <a class="btn btn_main btn_size-l wow fadeInUp js-open-modal" data-wow-delay="400ms" data-target="callback"><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;&nbsp;Заказать звонок</a>
     </div>
 </section>
 
@@ -1296,7 +1298,7 @@ CABINET MODALS
 
 <div class="modal" id="callback">
     <div class="modal__wrapper">
-        <span class="modal__close js-close-modal"></span>
+        <span class="modal__close js-modal-close"></span>
         <div class="signup__form">
             <div class="caption mb-20">
                 <h4 class="text-center">Закажите обратный звонок</h4>
@@ -1323,19 +1325,6 @@ CABINET MODALS
     	</div>
     </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
