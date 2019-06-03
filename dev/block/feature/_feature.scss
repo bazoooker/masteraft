@@ -30,3 +30,20 @@
 	}
 }
 
+@media screen and (max-width: 1200px) 	{}
+@media screen and (max-width: 992px) 	{}
+@media screen and (max-width: 768px) 	{
+	.feature {
+		text-align: center;
+		margin: 0 0 70px 0;
+	}
+	.feature__num-holder {
+		justify-content: center;
+	}
+	.feature__bg.feature__bg_left {left: 35%;}
+	.feature__bg.feature__bg_cent {left: 28%;}
+	.feature__bg.feature__bg_right {left: 35%; top: 20px;}
+}
+@media screen and (max-width: 568px) 	{}
+@media screen and (max-width: 414px) 	{}
+@media screen and (max-width: 375px) 	{}

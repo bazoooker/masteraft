@@ -38,3 +38,15 @@
 		transform: translateX(3px);
 	}
 }
+
+
+@media screen and (max-width: 1200px) 	{}
+@media screen and (max-width: 992px) 	{
+	.tabs-nav {
+		display: none;
+	}
+}
+@media screen and (max-width: 768px) 	{}
+@media screen and (max-width: 568px) 	{}
+@media screen and (max-width: 414px) 	{}
+@media screen and (max-width: 375px) 	{}

@@ -33,3 +33,20 @@
 	}
 }
 
+
+@media screen and (max-width: 1200px) 	{}
+@media screen and (max-width: 992px) 	{}
+@media screen and (max-width: 768px) 	{}
+@media screen and (max-width: 568px) 	{
+	.accordeon__label {
+		// p {
+		// 	text-decoration: underline;
+		// 	text-decoration-style: dotted;
+		// }
+		&::before {
+			display: none;
+		}		
+	}
+}
+@media screen and (max-width: 414px) 	{}
+@media screen and (max-width: 375px) 	{}

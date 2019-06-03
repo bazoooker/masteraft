@@ -55,3 +55,18 @@
 	.tab-link_active .tab-link__icon_boat-hard {background-image: url(/img/icons/icon-boat-1_active.png)}
 	.tab-link_active .tab-link__icon_boat-medi {background-image: url(/img/icons/icon-boat-2_active.png)}
 	.tab-link_active .tab-link__icon_boat-easy {background-image: url(/img/icons/icon-boat-3_active.png)}
+
+
+
+@media screen and (max-width: 1200px) 	{}
+@media screen and (max-width: 992px) 	{}
+@media screen and (max-width: 768px) 	{
+	.tab-link {
+		flex: 1 1 100%;
+		padding: 0 0 0px 0;
+		margin: 0 0 30px 0;
+	}
+}
+@media screen and (max-width: 568px) 	{}
+@media screen and (max-width: 414px) 	{}
+@media screen and (max-width: 375px) 	{}

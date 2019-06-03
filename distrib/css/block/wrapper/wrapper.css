@@ -9,7 +9,3 @@
   min-height: 100vh;
   height: auto;
   overflow-x: hidden; }
-
-@media screen and (max-width: 768px) {
-  .wrapper {
-    padding-top: 60px; } }

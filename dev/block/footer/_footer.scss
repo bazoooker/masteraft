@@ -21,3 +21,31 @@
 	}
 	
 }
+
+@media screen and (max-width: 1200px) 	{}
+@media screen and (max-width: 992px) 	{}
+@media screen and (max-width: 768px) 	{}
+@media screen and (max-width: 568px) 	{
+	.footer__link {
+		margin: 4px 0;
+	}
+	.footer__links-contacts {
+		margin: 15px 0;
+	    padding: 15px 0;
+	    // border-top: 1px solid rgba(255,255,255,.4);
+	    // border-bottom: 1px solid rgba(255,255,255,.4);
+	}
+	.footer__legal {
+		@include flex-row(wrap,flex-start,center);
+		.page-footer__copy,
+		.page-footer__by {
+			flex: 1 1 100%;
+			margin: 0 0 15px 0;
+		}
+
+	}
+}
+@media screen and (max-width: 414px) 	{}
+@media screen and (max-width: 375px) 	{}
+
+

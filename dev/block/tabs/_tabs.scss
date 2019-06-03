@@ -6,3 +6,16 @@
 	}
 	&__content {}
 }
+
+
+
+@media screen and (max-width: 1200px) 	{}
+@media screen and (max-width: 992px) 	{}
+@media screen and (max-width: 768px) 	{
+	.tabs__links {
+		@include flex-row(wrap,space-between, center);
+	}
+}
+@media screen and (max-width: 568px) 	{}
+@media screen and (max-width: 414px) 	{}
+@media screen and (max-width: 375px) 	{}

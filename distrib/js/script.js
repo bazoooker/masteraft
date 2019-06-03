@@ -414,6 +414,16 @@ $(document).ready(function(){
         nextEl: '.feedback-slider__nav .swiper-button-next',
         prevEl: '.feedback-slider__nav .swiper-button-prev',
       },
+      breakpoints: {
+        992: {
+          slidesPerView: 2,
+          spaceBetween: 30
+        },
+        768: {
+          slidesPerView: 1,
+          spaceBetween: 20
+        }
+      }
     });
 
     // var swiper = new Swiper('.js-slider-gallery', {
@@ -497,21 +507,23 @@ $(document).ready(function(){
     // ОТКРЫТИЕ-ЗАКРЫТИЕ МОБИЛЬНОГО МЕНЮ
 
 
-    // $('.js-open-mobile-menu').on('click', function() {
-    //     if( !$('#mobile-menu').hasClass('active') ) {
-    //         $('#mobile-menu').addClass('active');
-    //         $('.page-wrapper').addClass('no-scroll');
-    //     } else {
-    //         $('#mobile-menu').removeClass('active');
-    //         $('.page-wrapper').removeClass('no-scroll');
-    //     }
-    // });
+    $('.js-open-mobile-menu').on('click', function() {
+        if( !$('#mobile-menu').hasClass('active') ) {
+            $('#mobile-menu').addClass('active');
+            $('.page-wrapper').addClass('no-scroll');
+            console.log('open menu');
+        } else {
+            $('#mobile-menu').removeClass('active');
+            $('.page-wrapper').removeClass('no-scroll');
+            console.log('open menu');
+        }
+    });
 
-    // $(document).on( 'keydown', function ( e ) {
-    //     if ( e.keyCode === 27 ) {
+    $(document).on( 'keydown', function ( e ) {
+        if ( e.keyCode === 27 ) {
                 // функция....
-    //     }
-    // });
+        }
+    });
     // ---------------------------
 
 
