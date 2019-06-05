@@ -45,5 +45,10 @@
 	.feature__bg.feature__bg_right {left: 35%; top: 20px;}
 }
 @media screen and (max-width: 568px) 	{}
-@media screen and (max-width: 414px) 	{}
+@media screen and (max-width: 414px) 	{
+	.feature__bg {
+		width: 100%;
+		left: 0 !important;
+	}
+}
 @media screen and (max-width: 375px) 	{}

@@ -1,7 +1,6 @@
 
 $(window).scroll(function() {
 
-
     $('.js-trigger-boat').each(function() {
         if( $(this).visible(true) ) {
             if(!$('.js-trigger-boat').hasClass('triggered')) {
@@ -26,80 +25,33 @@ $(window).scroll(function() {
         }        
     });
 
-    // $('.js-trigger-map-boat').each(function() {
-    //     if( $(this).visible(true) ) {
-    //         if(!$('.js-trigger-map-boat').hasClass('triggered')) {
-    //             $('.js-trigger-map-boat').addClass('triggered');
-    //             var pathBoatMapWave = anime.path('#pathForMapBoat path');
-    //             console.log('trigger!');
-    //             anime({
-    //                 targets: '.js-raft-float',
-    //                 translateX: pathBoatWave('x'),
-    //                 translateY: pathBoatWave('y'),
-    //                 rotate: pathBoatWave('angle'),
-    //                 easing: 'linear',
-    //                 duration: 10000,
-    //                 begin: function(anim) {
-    //                     console.log('anim begin');
-    //                 },
-    //                 complete: function(anim) {
-    //                     $('.js-trigger-boat').removeClass('triggered');
-    //                 }
-    //             }) 
-    //         }
-    //     }        
-    // });
-
-
 });
-
-
-
-
-        // document.addEventListener("DOMContentLoaded", function(event) { 
-        //   document.getElementById("animate").onclick = function(){
-            
-
-        //     var timeline = anime.timeline({ autoplay: true, direction: 'alternate', loop: false });
-
-        //     timeline
-        //     .add({
-        //       targets: '#work-blyat', 
-        //       d: [
-        //         {
-        //           value: 'M247.954 65.4473C352.411 -54.7792 576.538 22.3088 648.769 53.114C649.132 53.2691 649.465 53.3814 649.847 53.4823C771.014 85.4892 961.252 231.832 961.252 453.498C961.252 600 768.274 638.526 450.515 725.807C144 810 -67.8036 764 -67.8036 659.412C-67.8036 543.715 -42.9018 511.922 83.8466 382.617C206 258 138 192 247.954 65.4473Z',
-        //           duration: 1000,
-        //           easing: 'easeInOutQuad'
-        //         },
-        //       ]
-        //     });
-        //   }
-        // });
-
-
-
-
-
-        // document.addEventListener("DOMContentLoaded", function(event) { 
-        //   document.getElementById("animate").onclick = function(){
-        //     anime({
-        //       targets: '#work-blyat',
-        //       d: [
-        //         { value: 'M308.298 50.653C439.099 -31.347 612.632 2.98618 678.798 37.1528C790.632 72.4862 1016.98 243.243 966.798 483.153C934.798 636.153 774.798 641.653 495.298 786.653C215.798 931.653 60.7985 830.153 16.7985 712.653C-27.2015 595.153 13.7985 508.653 156.798 404.153C299.798 299.653 144.798 153.153 308.298 50.653Z' },
-        //         { value: 'M248.396 51.5C379.196 -30.5 552.729 3.83322 618.896 37.9999C730.729 73.3332 1002.98 208.243 952.799 448.153C920.799 601.153 726 577 446.5 722C167 867 81.5 763.5 37.5 646C-6.50002 528.5 -39 449 104 344.5C247 240 84.8958 154 248.396 51.5Z' },
-        //         { value: 'M308.298 50.653C439.099 -31.347 612.632 2.98618 678.798 37.1528C790.632 72.4862 1016.98 243.243 966.798 483.153C934.798 636.153 774.798 641.653 495.298 786.653C215.798 931.653 60.7985 830.153 16.7985 712.653C-27.2015 595.153 13.7985 508.653 156.798 404.153C299.798 299.653 144.798 153.153 308.298 50.653Z' },
-        //       ],
-        //       easing: 'easeOutQuad',
-        //       duration: 1300,
-        //     });
-        //   }
-        // });
 
 
 
 
 
 $(document).ready(function(){
+
+    $(".js-scroll-to-section").click(function(event) {
+        event.preventDefault();
+        var targetSection = $(this).attr("data-scrollTo");
+        $('html, body').animate({
+            scrollTop: $("#"+targetSection).offset().top -150
+        }, 800);
+    });
+
+    $(".js-scroll-to-section-from-menu").click(function(event) {
+        event.preventDefault();
+        $('#mobile-menu').removeClass('active');
+        $('.page-wrapper').removeClass('no-scroll');
+        var targetSection = $(this).attr("data-scrollTo");
+        $('html, body').animate({
+            scrollTop: $("#"+targetSection).offset().top -150
+        }, 800);
+    });
+
+
 
     new WOW().init();
     $.stellar();
@@ -128,7 +80,7 @@ $(document).ready(function(){
                 { value: pathFrom },
             ],
             easing: 'easeOutQuad',
-            duration: 700,
+            duration: 5000,
         });
     });
 
@@ -193,25 +145,13 @@ $(document).ready(function(){
           duration: 6000,
           begin: function(anim) {
             console.log('anim begin');
-            // здесь сделать анимацию первого пина карты
           },
           complete: function(anim) {
             console.log('anim end');
-            // анимировать второй пин на карте
           }
         });
     })
-// var path = anime.path('.motion-path-demo path');
 
-// anime({
-//   targets: '.motion-path-demo .el',
-//   translateX: path('x'),
-//   translateY: path('y'),
-//   rotate: path('angle'),
-//   easing: 'linear',
-//   duration: 2000,
-//   loop: true
-// });
 
 
     // анимация лодки по большой волне
@@ -243,11 +183,15 @@ $(document).ready(function(){
     // --------------------
     // icon-text hover
     $('.js-icon-text-hover').mouseenter(function() {
-        $(this).addClass('icon-text_active');
+        if ($(window).width() > 768) {
+            $(this).addClass('icon-text_active');
+        }
     });
 
     $('.js-icon-text-hover').mouseleave(function() {
-        $(this).removeClass('icon-text_active');
+        if ($(window).width() > 768) {
+            $(this).removeClass('icon-text_active');
+        }
     })
     // --------------------
 
@@ -511,11 +455,9 @@ $(document).ready(function(){
         if( !$('#mobile-menu').hasClass('active') ) {
             $('#mobile-menu').addClass('active');
             $('.page-wrapper').addClass('no-scroll');
-            console.log('open menu');
         } else {
             $('#mobile-menu').removeClass('active');
             $('.page-wrapper').removeClass('no-scroll');
-            console.log('open menu');
         }
     });
 

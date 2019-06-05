@@ -66,109 +66,7 @@
 			background-size: 85%;
 			&::before, &::after {display: none;}
 		}
-
-		.btn-catalog {
-			color: #fff;
-		    min-width: 149px;
-
-		    &::before {
-		    	@include pseudo;
-		    	right: 30px;
-		    	top: 50%;
-				transform: translateY(-70%) rotate(45deg);
-
-				width: 8px;
-				height: 8px;
-
-				border-bottom: 2px solid rgba(255,255,255,.85);
-				border-right: 2px solid rgba(255,255,255,.85);
-
-				animation-delay: 2s;
-				transition-delay: 2s;
-		    }
-
-		    
-			// ВЕРНУТЬ
-
-		    // &:hover {
-		    // 	color: #fff;
-		    // 	&::before {
-		    // 		color: #fff;
-		    // 		animation: arrowBounceDown $tr2 ease;
-		    // 	}
-		    // 	.i-burger__bar {background-color: #fff;}
-		    // }
-		}
-
-
-
-
-		.search { margin: 0 20px 0 0;}
-
-		.shop-option {
-			position: relative;
-			display: inline-block;
-			height:100%;
-			margin: 0;
-			padding: 0;
-			width: 65px;
-			min-width: 65px;
-			// overflow: hidden;
-
-			&::before {
-				@include pseudo;
-				bottom: 0;
-				width: 0;
-				right: 0%;
-				height: 5px;
-			}
-
-			&:hover {
-				border-color: #ccaa02;
-
-				&::before {
-					left: 0;
-					right: auto;
-					width: 100%;
-					// transform: rotate(180deg);
-				}
-
-				.icon_rounded {
-					box-shadow: none;
-				}
-			}
-
-			&:first-child {
-				border-left: 1px solid #ccaa02;
-			}
-
-			.icon_rounded {
-				width: 100%;
-				flex: 1 1 100%;
-				border-radius: 0;
-				border: 0;
-				border-right: 1px solid #ccaa02;
-				margin: 0 0 0 0;
-				height:100%;
-
-				.fav-num {
-					color: #fff;
-					width: 18px;
-					height: 18px;
-					right: 10px;
-					top: 13px;
-					line-height: 17px;
-				}
-			}
-		}
-
 	}
-
-}
-
-.sticky-header__shop-controls {
-	@include flex-row(nowrap, space-between, center);
-	height: 100%;
 }
 
 
@@ -176,10 +74,6 @@
 	0% {
 		transform: rotateY(90deg)
 	}
-	
-	// 70% {
-	// 	transform: scale(1.06);
-	// }
 	100% {
 		transform: rotateY(0deg)
 	}
@@ -197,8 +91,6 @@
 @media screen and (max-width: 1024px) {
 	.sticky-header {
 		.container {
-			padding: 0;
-
 			.logo {
 				flex: 0 0 115px;
 				padding: 0 10px;
@@ -220,20 +112,32 @@
 @media screen and (max-width: 992px) {
 	.sticky-header {
 		.container {
-			.shop-option_visited{ display: none; }
-			.shop-option_fav-list {border-left: 1px solid #ccaa02;}
+			.nav {
+				display: none;
+			}
+			.logo {
+				flex: 0 0 185px;
+				max-width: 185px;
+			}
 		}
 	}
+
 }
 
 @media screen and (max-width: 768px) {
 	.sticky-header {
-		display: none;
+		.container {
+			@include flex-row(nowrap,flex-start,center);
+			.btn {margin-left: auto;}
+		}
 	}
+
 }
 
 @media screen and (max-width: 568px) {
-	
+	.sticky-header {
+		.logo.logo {display: none;}
+	}
 }
 
 @media screen and (max-width: 413px) {

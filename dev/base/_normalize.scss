@@ -30,6 +30,10 @@ body {
     margin: 0;
 }
 
+.content {
+  overflow-x: hidden;
+}
+
 *, *:before, *:after {
   box-sizing: border-box;
 }

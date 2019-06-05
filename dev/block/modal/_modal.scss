@@ -177,7 +177,8 @@
     top: 20px;
     width: 92%;
     overflow-y:scroll;
-    height:96%;
+    height: 92%;
+    max-height: 393px;
   }
 
   .modal__message_success,
@@ -196,7 +197,7 @@
 
 @media screen and (max-width: 568px) {
   .modal {
-    padding: 75px 5px;
+    padding: 45px 15px;
   }
 
   .modal__note {

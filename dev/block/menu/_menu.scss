@@ -1,11 +1,12 @@
 .menu {
 
 	height: 100%;
+	width: 100%;
 
 	// background-image: url(/img/bg/pattern_gray.png);
-	background-image: url(/img/bg/pattern_gray.jpg);
-	background-repeat: repeat;
-	background-size: 450px;
+	// background-image: url(/img/bg/pattern_gray.jpg);
+	// background-repeat: repeat;
+	// background-size: 450px;
 	// color: #fff;
 
 	opacity: 0;
@@ -20,6 +21,8 @@
 	max-height: 0;
 	padding: 0;
 	overflow: hidden;
+	background-color: #fff;
+
 
 	// .container {
 	// 	@include flex-row(wrap, space-between, stretch);
@@ -36,44 +39,28 @@
 	.page-header__bottombar {width: 100%;}
 	.nav {
 		@include flex-row(wrap,flex-start,center);
+		margin-bottom: 40px;
+	    padding-bottom: 40px;
+	    border-bottom: 1px solid rgba(255,255,255,.4);
 	}
 	.nav__link {
 		width: 100%;
+		padding: 8px 0;
 		flex: 0 0 100%;
 		min-width: 100%;
-		color: black;
+		color: #fff !important;
+		font-size: 20px;
+		&:hover {
+			background: none;
+			padding: 8px 0 !important;
+			width: 100%;
+		}
 	}
 }
-
-
-
-
-
-
-// .menu_narrow-left {
-// 	left: 0;
-// 	right: auto;
-// 	width: 290px;
-// 	transform: translateX(-101%);
-// }
-
-// .menu_narrow-right {
-// 	right: 0;
-// 	left: auto;
-// 	width: 290px;
-// 	transform: translateX(101%);
-// }
 
 .menu_full-screen {
 	width: 100%;
 }
-
-
-
-
-
-
-
 
 
 
@@ -84,17 +71,43 @@
 	height: 100%;
 	min-height: 100%;
 	overflow-y: auto;
-	background: $color_main;
+	background: #fff;
 	background-image: none;
 	opacity: 1;
-	transition: transform 800ms;	
+	transition: transform 500ms;	
 	z-index: 20 !important;
+
+	background: url(/img/bg/1-hero/bg-hero-bg.svg) #6bf2ef;
+    background-size: cover;
+    background-position: top right;
+    background-repeat: no-repeat;
 
 	// изменяется
 	transform: translateX(110%);
+
+	&::before {
+	    position: absolute;
+	    content: '';
+	    right: 0;
+	    top: 10%;
+	    width: 236px;
+	    height: 530px;
+	    background-image: url(/img/bg/1-hero/hero-bg-left-small.svg);
+	    background-size: contain;
+	    background-position: left center;
+	    background-repeat: no-repeat;
+	    transform: rotate(180deg) translateX(-80px);
+	    transition: 2200ms;
+	}
+
 	&.active {
 		transform: translateX(0);
+		&::before {
+	    	transform: rotate(180deg) translateX(0px);
+		}
 	}
+
+	.btn {width: 100%;}
 
 	.container {
 		padding: 0 20px !important;
@@ -110,28 +123,6 @@
 	.page-footer__company-info {height: auto;}
 }
 
-.menu_catalog {
-	position: absolute;
-	top: 243px;	
-	height: 550px;
-	min-height: 550px;
-	max-height: 550px;
-
-	.menu__product-categories,
-	.menu__product-items {
-		height: 550px;
-		min-height: 550px;
-		max-height: 550px;
-	}
-	// анимация меню
-	&.active {
-		.menu__product-categories .catalog-link,
-		.menu__product-items .menu__product-items-holder {
-			transform: none;
-			opacity: 1;
-		}		
-	}
-}
 
 .menu_sticky {
 	position: fixed;
@@ -175,11 +166,11 @@
 
 	height: 70px;
 	padding: 0 0 0 20px;
-	margin: 0 0 0px 0;
+	margin: 0 0 40px 0;
+	border-bottom: 1px solid rgba(255,255,255,.4);
 
 
-	border-bottom: 1px solid #ccaa02;
-	background-color: $color_main;
+	// background-color: $color_main;
 }
 .menu__footer {
 	background-color: 300ms;
@@ -189,6 +180,7 @@
 	@include flex-row(wrap, flex-start, center);
 	height: 100%;
 	flex-grow: 1;
+	border-right: 1px solid rgba(255,255,255,.4);
 	
 
 	a {
@@ -264,7 +256,7 @@
       width: 35px;
       height: 1px;
 
-      background: black;
+      background: #f1f1f1;
     }
 
     &:before {
@@ -277,7 +269,7 @@
       width: 1px;
       height: 35px;
 
-      background: black;
+      background: #f1f1f1;
     }
 
     &:active {

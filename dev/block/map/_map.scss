@@ -44,3 +44,19 @@
 		@include bg-contain;
 	}
 }
+
+
+@media screen and (max-width: 1200px) 	{
+	.map {
+		background-image: url(/img/bg/5-stats/map_mobile.png);
+
+		&__pin,
+		&__line,
+		&__raft {display: none;}
+	}
+}
+@media screen and (max-width: 992px) 	{}
+@media screen and (max-width: 768px) 	{}
+@media screen and (max-width: 568px) 	{}
+@media screen and (max-width: 414px) 	{}
+@media screen and (max-width: 375px) 	{}
