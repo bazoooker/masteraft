@@ -5567,6 +5567,40 @@ html.lb-disable-scrolling {
   .btn_main:visited, input.btn_main:visited {
     color: #fff; }
 
+.btn_call-icon {
+  position: relative;
+  padding-left: 100px !important; }
+  .btn_call-icon::before {
+    position: absolute;
+    content: '';
+    width: 40px;
+    height: 40px;
+    left: 37px;
+    top: 50%;
+    background: url(/img/icons/tel.svg);
+    background-position: 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%); }
+
+.btn_size-xl {
+  font-size: 19px;
+  padding: 28px 55px; }
+  @media screen and (max-width: 1200px) {
+    .btn_size-xl {
+      font-size: 18px; } }
+  @media screen and (max-width: 992px) {
+    .btn_size-xl {
+      font-size: 17px; } }
+  @media screen and (max-width: 768px) {
+    .btn_size-xl {
+      font-size: 16px; } }
+  @media screen and (max-width: 568px) {
+    .btn_size-xl {
+      font-size: 14px; } }
+
 .btn_size-l {
   font-size: 16px;
   padding: 18px 40px; }
@@ -5652,7 +5686,13 @@ html.lb-disable-scrolling {
 
 @media screen and (max-width: 413px) {
   .btn {
-    width: 100%; } }
+    width: 100%; }
+  .btn.btn_call-icon {
+    padding-left: 65px !important; }
+    .btn.btn_call-icon::before {
+      left: 35px;
+      width: 25px;
+      height: 25px; } }
 
 @media screen and (min-width: 769px) {
   .btn-burger {
@@ -6460,7 +6500,7 @@ html.lb-disable-scrolling {
     opacity: 0;
     height: 0;
     overflow: hidden;
-    line-height: 1.45;
+    line-height: 1.35;
     -webkit-transition: 300ms;
     -o-transition: 300ms;
     transition: 300ms; }
@@ -6470,7 +6510,7 @@ html.lb-disable-scrolling {
     top: -5%;
     left: -5%;
     width: 110%;
-    height: calc(100% + 280px);
+    height: calc(100% + 250px);
     background: #FFFFFF;
     border-radius: 50px;
     -webkit-box-shadow: 0px 0px 25px rgba(8, 101, 153, 0.15);
@@ -7883,6 +7923,8 @@ html.lb-disable-scrolling {
       transform: translateX(-50%) translateY(-50%) rotate(-90deg); }
       .bullets__dot svg circle {
         stroke-dashoffset: 100; }
+  .bullets__dot_active:hover {
+    background-color: transparent !important; }
   .bullets__dot_active svg {
     opacity: 1; }
   .bullets__dot-num {
@@ -8111,6 +8153,37 @@ html.lb-disable-scrolling {
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     transform: rotate(180deg); }
+
+.big-nums {
+  position: relative; }
+  .big-nums::before {
+    position: absolute;
+    content: '18 959';
+    width: 600px;
+    height: 148px;
+    opacity: .06;
+    font-size: 192px;
+    left: -25px;
+    top: -13px;
+    line-height: .8; }
+
+@media screen and (max-width: 768px) {
+  .big-nums::before {
+    top: -6px;
+    left: -8px;
+    width: 420px;
+    height: 100px;
+    opacity: .06;
+    font-size: 132px; } }
+
+@media screen and (max-width: 414px) {
+  .big-nums::before {
+    top: 26px;
+    left: 0px;
+    width: 280px;
+    height: 70px;
+    opacity: .06;
+    font-size: 85px; } }
 
 .signup-form {
   position: relative;

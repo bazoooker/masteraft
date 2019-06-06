@@ -49,6 +49,24 @@
 	&:visited {color: #fff;}
 }
 
+.btn_call-icon {
+	position: relative;
+	padding-left: 100px !important;
+	&::before {
+		position: absolute;
+	    content: '';
+	    width: 40px;
+	    height: 40px;
+	    left: 37px;
+	    top: 50%;
+	    background: url(/img/icons/tel.svg);
+	    background-position: 50% 50%;
+	    background-size: contain;
+	    background-repeat: no-repeat;
+	    transform: translateY(-50%);
+	}
+
+}
 
 // .btn_secondary, input.btn_secondary {
 // 	background-color: #ededed;
@@ -81,7 +99,10 @@
 // 	&:focus 	{}
 // }
 
-
+.btn_size-xl {
+	@include font-kit(19px, 18px, 17px, 16px, 14px);
+	padding: 28px 55px;
+}
 
 .btn_size-l {
 	@include font-kit(16px, 16px, 15px, 15px, 14px);
@@ -129,6 +150,14 @@
 @media screen and (max-width: 568px) {}
 @media screen and (max-width: 413px) {
 	.btn {width: 100%;}
+	.btn.btn_call-icon {
+		padding-left: 65px !important;
+		&::before {
+			left: 35px;
+			width: 25px;
+			height: 25px;
+		}
+	}
 }
 
 @media screen and (min-width: 769px) {

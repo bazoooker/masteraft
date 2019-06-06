@@ -23,6 +23,9 @@
 		}
 	}
 	&__dot_active {
+		&:hover {
+			background-color: transparent !important;
+		}
 		svg {
 			opacity: 1;
 		}
