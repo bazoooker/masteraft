@@ -25,6 +25,31 @@ $(window).scroll(function() {
         }        
     });
 
+
+    $('.js-trigger-boat-on-map').each(function() {
+        if( $(this).visible(true) ) {
+            if(!$('.js-trigger-boat-on-map').hasClass('triggered')) {
+                $('.js-trigger-boat-on-map').addClass('triggered');
+                var pathBoatMap = anime.path('#pathForMapBoat path');
+                console.log('trigger!');
+                anime({
+                    targets: '.js-raft-on-map',
+                    translateX: pathBoatMap('x'),
+                    translateY: pathBoatMap('y'),
+                    rotate: pathBoatMap('angle'),
+                    easing: 'linear',
+                    duration: 6000,
+                    begin: function(anim) {
+                        console.log('anim begin');
+                    },
+                    complete: function(anim) {
+                        $('.js-move-boat-on-map').removeClass('triggered');
+                    }
+                }) 
+            }
+        }        
+    });
+
 });
 
 
@@ -32,6 +57,20 @@ $(window).scroll(function() {
 
 
 $(document).ready(function(){
+
+        // читать далее
+        $('.js-read-more').click(function(e) {
+            e.preventDefault();
+            if( !$(this).hasClass('read-more__link_active') ) {
+                $(this).addClass('read-more__link_active');
+                $(this).next().slideDown(300);
+            }else {
+                $(this).removeClass('read-more__link_active');
+                $(this).next().slideUp(300);
+            }
+        });
+
+
 
     $(".js-scroll-to-section").click(function(event) {
         event.preventDefault();
@@ -103,17 +142,24 @@ $(document).ready(function(){
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
           ['Task', 'Hours per Day'],
-          ['Маршруты на моторных лодках', 6873],
           ['Пешие маршруты', 2008],
           ['Конные маршруты', 1683],
           ['Простые сплавы', 507],
-          ['Солжные рафт-сплавы', 7129]
+          ['Солжные рафт-сплавы', 7129],
+          ['Маршруты на моторных лодках', 6873]
         ]);
 
         var options = {
           pieHole: 0.6,
           legend: 'none',
           backgroundColor: 'none',
+          slices: {
+            0: { color: 'FF984E' },
+            1: { color: 'CBDC80' },
+            2: { color: 'FFBD5A' },
+            3: { color: '35E0AD' },
+            4: { color: 'FC564B' }
+          }
         };
 
         var chart = new google.visualization.PieChart(document.getElementById('donutchart'));

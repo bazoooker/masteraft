@@ -62,16 +62,19 @@
                 <a href="/" class="logo logo_header"></a>
                 <div class="header__info">
                     <div class="header__top">
-                        <a href="tel:+79131112233" class="tel">8 800 222 22 22 &mdash; звонок бесплатный</a>
+                        <div class="tel">
+                            <a href="tel:+79131232222">+79131232222</a>&nbsp;&mdash;&nbsp;
+                            <span>звонок бесплатный</span>
+                        </div>
 
                         <div class="socials">
-                            <a href="/" class="link-social">
+                            <a href="/" class="link-social link-social_ig">
                                 <img src="/img/icons/i-ig.svg">
                             </a>
-                            <a href="/" class="link-social">
+                            <a href="/" class="link-social link-social_yt">
                                 <img src="/img/icons/i-yt.svg">
                             </a>
-                            <a href="/" class="link-social">
+                            <a href="/" class="link-social link-social_vk">
                                 <img src="/img/icons/i-vk.svg">
                             </a>
                         </div> 
@@ -242,7 +245,7 @@
                             <p class="mb-60">
                                 Мой первый сплав прошел в 2000 году в составе команды ГАГУ, а к 2006 году у меня была целая коробка наград и медалей. В какой-то момент люди стали просить меня сплавиться с ними - показать, научить. Тогда я подумал, что мог бы перенести свой опыт рафтинга в бизнес. Что я и сделал в 2006 году, открыв туристическою фирму. Что дал мне рафтинг? Ответственность и чувство локтя.
                             </p>
-                            <a href="" class="btn btn_main btn_size-l">
+                            <a href="" class="btn btn_main btn_size-l js-open-modal" data-target="write">
                                 Написать руководителю&nbsp;&nbsp;&nbsp;<i class="fa fa-chevron-right" aria-hidden="true"></i>
                             </a>
                         </div>
@@ -383,15 +386,21 @@
                                 </p>
                                 безопасность и надежность. Активный отдых всегда связан с рисками. И мы никогда не будем экономить на безопасности. Качество снаряжения и инвентаря, квалификация персонала, соблюдение норм техники безопасности – все это всегда в приоритете, нежели финансовая выгода. Мы не поддерживаем тот факт, что цены на отдых каждый год неоправданно повышаются.
                             </p>
-                            <a href="" class="">
-                                Читать дальше&nbsp;&nbsp;&nbsp;<i class="fa fa-caret-down" aria-hidden="true"></i>
-                            </a>
+                            <div class="read-more">
+                                <a class="read-more__link js-read-more" href="">
+                                    Читать дальше&nbsp;&nbsp;&nbsp;<i class="fa fa-caret-down" aria-hidden="true"></i>
+                                </a>
+                                <div class="read-more__content" style="display: none;">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque laudantium dignissimos eius nesciunt nisi deleniti ad, esse totam quasi officiis accusantium qui quam dolores quidem commodi consequatur voluptatibus vitae ipsum!</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque laudantium dignissimos eius nesciunt nisi deleniti ad, esse totam quasi officiis accusantium qui quam dolores quidem commodi consequatur voluptatibus vitae ipsum!</p>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
                 </div>
                 
             </section>
-
 
 
             <div class="h-stats-bg h-bg-bigwave h-bg-bigwave_left">
@@ -413,24 +422,27 @@
                             </div>
                         </div>
                         <div class="col-12 col-md-8">
-                            <div class="map wow fadeInUp">
+                            <div class="map js-trigger-boat-on-map">
                                 <!-- !!! у карты нужно удалить подложку -->
-                                <div class="map__pin map__pin_left wow fadeInUp" data-wow-delay="400ms">
+                                <div class="map__pin map__pin_left wow fadeInUp" data-wow-delay="0ms">
                                     <i></i>
                                     <span>Москва</span>
                                 </div>
-                                <div class="map__pin map__pin_right wow fadeInUp" data-wow-delay="600ms">
+                                <div class="map__pin map__pin_right wow fadeInUp" data-wow-delay="200ms">
                                     <i></i>
                                     <span>Хабаровск</span>
                                 </div>
                                 <div class="map__line">
-                                    <svg class="" id="#pathForMapBoat" width="100%" height="100%" viewBox="0 0 484 169" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <svg class="" width="100%" height="100%" viewBox="0 0 484 169" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M1 1C97 2.83333 328.2 33.9 483 167.5" stroke="#EE4542" stroke-width="2" stroke-linecap="round" stroke-dasharray="2 8"/>
                                     </svg>
+                                    <svg class="" id="pathForMapBoat" width="100%" height="100%" viewBox="0 0 414 169" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 1C76.8919 2.39086 265.476 22.3806 396.5 118.5" stroke="transparent" stroke-width="2" stroke-linecap="round" stroke-dasharray="2 8"/>
+                                    </svg>
                                 </div>
-                                <div class="map__raft js-raft-total-distance wow fadeInDown" data-wow-delay="1200ms"></div>
+                                <div class="map__raft js-raft-on-map"></div>
                             </div>
-                            <p class="text-big">
+                            <p class="text-big h-md-hide-br">
                                 Более <span class="text-accent">6 000</span> километров пройдено по реке<br/> нашими рафтами за 2018 год. Это равняется<br/> расстоянию от Москвы до Хабаровска
                             </p>
                         </div>
@@ -521,7 +533,7 @@
 <section id="services" class="mb-200">
     <div class="container">
         <h2>Услуги</h2>
-        <p class="text-big">Рафтинг</p>
+        <p class="text-big">Рафтинг&nbsp;&nbsp;&nbsp;&nbsp; <small class="text-accent">Важно: необходимо записаться заранее!</small></p>
 
         
         <!-- одна услуга -->
@@ -1137,13 +1149,13 @@
                </div>
                <div class="col-12 col-sm-6 col-md-3">
                     <div class="socials">
-                        <a href="/" class="link-social">
+                        <a href="/" class="link-social link-social_ig">
                             <img src="/img/icons/i-ig.svg">
                         </a>
-                        <a href="/" class="link-social">
+                        <a href="/" class="link-social link-social_yt">
                             <img src="/img/icons/i-yt.svg">
                         </a>
-                        <a href="/" class="link-social">
+                        <a href="/" class="link-social link-social_vk">
                             <img src="/img/icons/i-vk.svg">
                         </a>
                     </div> 
@@ -1307,6 +1319,38 @@ CABINET MODALS
     		<i class="fa fa-check fa-3x" aria-hidden="true"></i><br/>
     		<h3 class="color-white">Отправлено!</h3>
     	</div>
+    </div>
+</div>
+
+
+<div class="modal" id="write">
+    <div class="modal__wrapper">
+        <span class="modal__close js-modal-close"></span>
+        <div class="signup__form">
+            <div class="caption mb-20">
+                <h4 class="text-center">Написать руководителю</h4>
+            </div>
+            <form class="signup-form" action=''>
+                <div class="signup-form__label mb-20">
+                    <input type="text" class="js-floating-label">
+                    <span class="signup-form__floating-placeholder">Ваше имя</span>
+                </div>
+                <div class="signup-form__label mb-20">
+                    <input type="text" class="js-floating-label js-mask-tel">
+                    <span class="signup-form__floating-placeholder">Номер телефона</span>
+                </div>
+                <textarea class="mb-20" name="msg" id="" rows="5" style="width: 100%"></textarea>
+                <div class="text-center mb-20">
+                    <a href="#" class="btn btn_main btn_size-l js-show-success-message">Отправить</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="message" id="success-msg">
+        <div class="text-center">
+            <i class="fa fa-check fa-3x" aria-hidden="true"></i><br/>
+            <h3 class="color-white">Отправлено!</h3>
+        </div>
     </div>
 </div>
 
