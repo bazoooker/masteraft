@@ -28,30 +28,9 @@
     </head>
 
 
-    <body class="wrapper">
+    <body class="wrapper h-no-scroll">
 
-        <style>
-            .preloader {
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background-color: gray;
-                z-index: 9999;
-                display: -webkit-flex;
-                display: -moz-flex;
-                display: -ms-flex;
-                display: -o-flex;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                background: #40EBD6;
-            }
-        </style>
-
-        <!-- <div class="preloader"></div> -->
-
+        
         <header class="header">
             <div class="container header__wrapper">
                 <div class="btn-burger js-open-mobile-menu">
@@ -63,7 +42,7 @@
                 <div class="header__info">
                     <div class="header__top">
                         <div class="tel">
-                            <a href="tel:+79131232222">+79131232222</a>&nbsp;&mdash;&nbsp;
+                            <a href="tel:+78005501722">+78005501722</a>&nbsp;&mdash;&nbsp;
                             <span>звонок бесплатный</span>
                         </div>
 
@@ -110,27 +89,36 @@
                     <div class="container mb-40">
                         <div class="hero__text-slide hero__text-slide_active" id="text-slide-0">
                             <div class="row">
-                                <div class="col-lg-3 col-md-6 col-sm-8 col-12">
-                                    <h1 class="sea-deco sea-deco_white">Прогулочный сплав</h1>
-                                    <p>111 Сплав по спокойным участкам реки с преодолением простых препятствий. Осмотр с воды достопримечательностей, таких как Чемальская ГЭС, «Козья тропа», о.Патмос, «Зубы Дракона»</p>
+                                <div class="col-lg-4 col-md-6 col-sm-8 col-12">
+                                    <h1 class="sea-deco sea-deco_white">Сплав <br/>«4 порога» </h1>
+                                    <p>Сплав с прохождением порогов Тельдекпень-1 и Тельдекпень-2 (самых сложных порогов на Катуни), а также порогов Бийка и Еландинский</p>
                                 </div>
                             </div>
                         </div>
                         <div class="hero__text-slide" style="display: none;" id="text-slide-1">
                             <div class="sea-deco"><span></span></div>
                             <div class="row">
-                                <div class="col-lg-3 col-md-6 col-sm-8 col-12">
-                                    <h1 class="sea-deco sea-deco_white">Сплав по порогам</h1>
-                                    <p>222 Сплав по спокойным участкам реки с преодолением простых препятствий. Осмотр с воды достопримечательностей, таких как Чемальская ГЭС, «Козья тропа», о.Патмос, «Зубы Дракона»</p>
+                                <div class="col-lg-4 col-md-6 col-sm-8 col-12">
+                                    <h1 class="sea-deco sea-deco_white">Сплав <br/>«2 порога»</h1>
+                                    <p>Сплав средней сложности с преодолением порогов Бийка и Еландинский</p>
                                 </div>
                             </div>
                         </div>
                         <div class="hero__text-slide" style="display: none;" id="text-slide-2">
                             <div class="sea-deco"><span></span></div>
                             <div class="row">
-                                <div class="col-lg-3 col-md-6 col-sm-8 col-12">
-                                    <h1 class="sea-deco sea-deco_white">Обзорная прогулка</h1>
-                                    <p>333 Сплав по спокойным участкам реки с преодолением простых препятствий. Осмотр с воды достопримечательностей, таких как Чемальская ГЭС, «Козья тропа», о.Патмос, «Зубы Дракона»</p>
+                                <div class="col-lg-4 col-md-6 col-sm-8 col-12">
+                                    <h1 class="sea-deco sea-deco_white">Прогулочный сплав</h1>
+                                    <p>Сплав по спокойным участкам реки с преодолением простых препятствий.  Осмотр с воды достопримечательностей, таких как Чемальская ГЭС, «Козья тропа», о.Патмос, «Зубы Дракона»</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hero__text-slide" style="display: none;" id="text-slide-3">
+                            <div class="sea-deco"><span></span></div>
+                            <div class="row">
+                                <div class="col-lg-4 col-md-6 col-sm-8 col-12">
+                                    <h1 class="sea-deco sea-deco_white">Моторафтинг</h1>
+                                    <p>Маршруты на моторной лодке, а также доставка по воде от о.Патмос до ГЭС и обратно.</p>
                                 </div>
                             </div>
                         </div>
@@ -151,6 +139,12 @@
                                 </svg>
                             </span>
                             <span class="bullets__dot bullets__dot_white js-animate-bullet js-hero-slider-controls" data-slideto="2">
+                                <span class="bullets__dot-num">3</span>
+                                <svg id="dot" width="34" height="34" viewBox="0 0 34 34">
+                                  <circle cx="17" cy="17" r="15" fill="none" stroke="#F45834" stroke-width="2" stroke-dasharray="100" />
+                                </svg>
+                            </span>
+                            <span class="bullets__dot bullets__dot_white js-animate-bullet js-hero-slider-controls" data-slideto="3">
                                 <span class="bullets__dot-num">3</span>
                                 <svg id="dot" width="34" height="34" viewBox="0 0 34 34">
                                   <circle cx="17" cy="17" r="15" fill="none" stroke="#F45834" stroke-width="2" stroke-dasharray="100" />
@@ -190,16 +184,17 @@
                 <div class="swiper-container hero__slider js-hero-slider">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide hero__slide">
-                            <div class="hero__photo" style="background-image: url(/img/bg/1-hero/bg-hero-photo-clipped.png);"></div>
+                            <div class="hero__photo" style="background-image: url(/img/bg/1-hero/min/bg-hero-photo-clipped.png);"></div>
                             <div class="hero__photo-deco"></div>
                         </div>
                         <div class="swiper-slide hero__slide">
-                            <div class="hero__photo" style="background-image: url(/img/bg/1-hero/bg-hero-photo-clipped2.png);"></div>
-                            <!-- <div class="hero__photo-deco"></div> -->
+                            <div class="hero__photo" style="background-image: url(/img/bg/1-hero/min/bg-hero-photo-clipped2.png);"></div>
                         </div>
                         <div class="swiper-slide hero__slide">
-                            <div class="hero__photo" style="background-image: url(/img/bg/1-hero/bg-hero-photo-clipped3.png);"></div>
-                            <!-- <div class="hero__photo-deco"></div> -->
+                            <div class="hero__photo" style="background-image: url(/img/bg/1-hero/min/bg-hero-photo-clipped3.png);"></div>
+                        </div>
+                        <div class="swiper-slide hero__slide">
+                            <div class="hero__photo" style="background-image: url(/img/bg/1-hero/min/bg-hero-photo-clipped4.png);"></div>
                         </div>
                     </div>
                 </div>
@@ -462,7 +457,8 @@
                                     <img src="/img/bg/6-advant/advant-icon-1.svg" alt="">
                                 </div>
                                 <p class="icon-text__caption">Бесплатные гидрокостюмы</p>
-                                <p class="icon-text__more">В холодную погоду это обязательный элемент снаряжения, а не дополнительная опция. Температура воды в р.Катунь редко поднимается выше 15°С, и выдавать гидрокостюмы за дополнительную плату – это спекуляция на здоровье клиентов.</p>
+                                <p class="icon-text__more">Выдаем гидрокостюмы бесплатно т.к. в холодную погоду это обязательный элемент снаряжения, а не доп. опция. Температура воды в Катуни редко поднимается выше 15°С, и выдавать гидрокостюмы за дополнительную плату – это спекуляция на здоровье клиентов.
+                                </p>
                             </div>
                         </div>
                         <div class="col-12 col-md-6 col-lg-3">
@@ -471,8 +467,8 @@
                                     <span class="icon-text__arc" style="background-image: url(/img/bg/6-advant/ellipse-2.svg);"></span>
                                     <img src="/img/bg/6-advant/advant-icon-2.svg" alt="">
                                 </div>
-                                <p class="icon-text__caption">Новое<br/>снаряжение</p>
-                                <p class="icon-text__more">В холодную погоду это обязательный элемент снаряжения, а не дополнительная опция. Температура воды в р.Катунь редко поднимается выше 15°С, и выдавать гидрокостюмы за дополнительную плату – это спекуляция на здоровье клиентов.</p>
+                                <p class="icon-text__caption">Качественное<br/>снаряжение</p>
+                                <p class="icon-text__more">Ежегодно закупаем новое снаряжение, а старое и негодное списываем. Мы постоянно следим за требованиями современной безопасности. </p>
                             </div>
                         </div>
                         <div class="col-12 col-md-6 col-lg-3">
@@ -482,7 +478,7 @@
                                     <img src="/img/bg/6-advant/advant-icon-3.svg" alt="">
                                 </div>
                                 <p class="icon-text__caption">Квалифицированные инструктора</p>
-                                <p class="icon-text__more">В холодную погоду это обязательный элемент снаряжения, а не дополнительная опция. Температура воды в р.Катунь редко поднимается выше 15°С, и выдавать гидрокостюмы за дополнительную плату – это спекуляция на здоровье клиентов.</p>
+                                <p class="icon-text__more">Все инструктора у нас проходят аттестацию, многие имеют спортивные разряды. Каждый год перед сезоном мы проводим учебно-тренировочные сборы, занятия по оказанию первой помощи, лекции по безопасности на воде. Осенью сами ходим в спортивные походы.</p>
                             </div>
                         </div>
                         <div class="col-12 col-md-6 col-lg-3">
@@ -492,7 +488,7 @@
                                     <img src="/img/bg/6-advant/advant-icon-4.svg" alt="">
                                 </div>
                                 <p class="icon-text__caption">Дополнительные меры безопасности</p>
-                                <p class="icon-text__more">В холодную погоду это обязательный элемент снаряжения, а не дополнительная опция. Температура воды в р.Катунь редко поднимается выше 15°С, и выдавать гидрокостюмы за дополнительную плату – это спекуляция на здоровье клиентов.</p>
+                                <p class="icon-text__more">На время сплава у каждого инструктора с собой всегда есть рация для связи с берегом и аптечка первой помощи. Сложные маршруты мы часто ходим несколькими судами для взаимной страховки.</p>
                             </div>
                         </div>
                     </div>
@@ -515,7 +511,7 @@
         <h2 class="text-accent mb-10">У вас все еще остались сомнения?</h2>
         <p class="text-accent mb-10">Звоните — и мы развеем их полностью!</p>
         <div class="mb-20 text-big">
-            <a class="text-accent" href="tel:88002222222">8-800-222-2-222</a>
+            <a class="text-accent" href="tel:+78005501722">+7-800-550-17-22</a>
         </div>
         <a class="btn btn_main btn_size-xl btn_call-icon wow fadeInUp js-open-modal" data-wow-delay="400ms" data-target="callback">Заказать звонок</a>
     </div>
@@ -544,124 +540,73 @@
                         <div class="tabs__links">
                             <div class="tab-link js-tab-link tab-link_active" data-target="1">
                                 <i class="tab-link__icon tab-link__icon_raft-hard"></i>
-                                Маршрут четыре порога
+                               Маршрут <br/>&laquo;2 порога&raquo;
                             </div>
                             <div class="tab-link js-tab-link" data-target="2">
                                 <i class="tab-link__icon tab-link__icon_raft-medi"></i>
-                                Маршрут 2 порога
+                                Маршрут <br/>&laquo;4 порога&raquo;
                             </div>
                             <div class="tab-link js-tab-link" data-target="3">
                                 <i class="tab-link__icon tab-link__icon_raft-easy"></i>
-                                Прогулочные маршруты
+                                Прогулочный сплав
                             </div>
                         </div>
                         <div class="tabs__content">
                             <div class="tab-slide" id="tab-slide-1">
                                 <div class="row mb-20">
                                     <div class="col-4">
-                                        <i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;от <b>10 лет</b>
+                                        <i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;от <b>14 лет</b>
                                     </div>
                                     <div class="col-8">
-                                        <i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;<b>600-1000 рублей с человека</b>
+                                        <i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;<b>900 рублей с человека</b>
                                     </div>
                                 </div>
                                 <p class="mb-20">
-                                    Слайд 1<br/>
-                                    Все прогулочные маршруты проходят по относительно спокойным участкам реки, мимо Чемальской ГЭС и о.Патмос. Единственное категорийное препятствие – порог Чемальские ворота, минимальной категории сложности.
-                                </p>
-                                <p class="mb-0">
-                                    <b>Часовой маршрут</b>
+                                    На данный маршрут допускаются дети от 14 лет и взрослые. Стоимость — 900 рублей с человека. 
                                 </p>
                                 <p class="mb-20">
-                                    600 рублей с человека. Это сплав либо с прохождением порога Чемальские ворота, мимо Чемальской ГЭС и о.Патмос, либо сплав по спокойному участку реки без прохождения порогов.
+                                    Сплав начинается 33 км выше с.Чемал, прохождение порогов Бийка и Еландинский.
                                 </p>
-                                <p class="mb-0">
-                                    <b>Двухчасовой маршрут</b>
-                                </p>
+                                
+                            </div>
+                            <div class="tab-slide tab-slide_hidden" id="tab-slide-2">
+                                <div class="row mb-20">
+                                    <div class="col-4">
+                                        <i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;от <b>18 лет</b>
+                                    </div>
+                                    <div class="col-8">
+                                        <i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;<b>1100 рублей с человека</b>
+                                    </div>
+                                </div>
                                 <p class="mb-20">
-                                    800 рублей с человека. Сплав начинается 12 км выше с.Чемал, прохождение Берткинской шиверы, пор.Чемальские ворота.
-                                </p>
-                                <p class="mb-0">
-                                    <b>Трехчасовой маршрут</b>
-                                </p>
+                                    На данный маршрут допускаются взрослые с 18 лет. Стоимость — 1 100 рублей с человека.
+                                </p>                            
                                 <p class="mb-20">
-                                    1000 рублей с человека. Сплав начинается 12 км выше с.Чемал, прохождение Берткинской шиверы, пор.Чемальские ворота, Эликмонарской шиверы.
+                                    Сплав начинается 40 км выше с.Чемал, прохождение порогов Тельдекпень-1, Тельдекпень-2, Бийка, Еландинский.
                                 </p>
                             </div>
                             <div class="tab-slide tab-slide_hidden" id="tab-slide-2">
                                 <div class="row mb-20">
                                     <div class="col-4">
-                                        <i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;от <b>9 лет</b>
-                                    </div>
-                                    <div class="col-8">
-                                        <i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;<b>500-900 рублей с человека</b>
-                                    </div>
-                                </div>
-                                <p class="mb-20">
-                                    Слайд 2<br/>
-                                    Все прогулочные маршруты проходят по относительно спокойным участкам реки, мимо Чемальской ГЭС и о.Патмос. Единственное категорийное препятствие – порог Чемальские ворота, минимальной категории сложности.
-                                </p>
-                                <p class="mb-0">
-                                    <b>Часовой маршрут</b>
-                                </p>
-                                <p class="mb-20">
-                                    500 рублей с человека. Это сплав либо с прохождением порога Чемальские ворота, мимо Чемальской ГЭС и о.Патмос, либо сплав по спокойному участку реки без прохождения порогов.
-                                </p>
-                                <p class="mb-0">
-                                    <b>Двухчасовой маршрут</b>
-                                </p>
-                                <p class="mb-20">
-                                    800 рублей с человека. Сплав начинается 12 км выше с.Чемал, прохождение Берткинской шиверы, пор.Чемальские ворота.
-                                </p>
-                                <p class="mb-0">
-                                    <b>Трехчасовой маршрут</b>
-                                </p>
-                                <p class="mb-20">
-                                    1000 рублей с человека. Сплав начинается 12 км выше с.Чемал, прохождение Берткинской шиверы, пор.Чемальские ворота, Эликмонарской шиверы.
-                                </p>                            
-                            </div>
-                            <div class="tab-slide tab-slide_hidden" id="tab-slide-3">
-                                <div class="row mb-20">
-                                    <div class="col-4">
                                         <i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;от <b>10 лет</b>
                                     </div>
                                     <div class="col-8">
-                                        <i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;<b>400-800 рублей с человека</b>
+                                        <i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;<b>1100 рублей с человека</b>
                                     </div>
                                 </div>
                                 <p class="mb-20">
-                                    Слайд 3<br/>
-                                    Все прогулочные маршруты проходят по относительно спокойным участкам реки, мимо Чемальской ГЭС и о.Патмос. Единственное категорийное препятствие – порог Чемальские ворота, минимальной категории сложности.
-                                </p>
-                                <p class="mb-0">
-                                    <b>Часовой маршрут</b>
-                                </p>
-                                <p class="mb-20">
-                                    400 рублей с человека. Это сплав либо с прохождением порога Чемальские ворота, мимо Чемальской ГЭС и о.Патмос, либо сплав по спокойному участку реки без прохождения порогов.
-                                </p>
-                                <p class="mb-0">
-                                    <b>Двухчасовой маршрут</b>
-                                </p>
-                                <p class="mb-20">
-                                    800 рублей с человека. Сплав начинается 12 км выше с.Чемал, прохождение Берткинской шиверы, пор.Чемальские ворота.
-                                </p>
-                                <p class="mb-0">
-                                    <b>Трехчасовой маршрут</b>
-                                </p>
-                                <p class="mb-20">
-                                    1000 рублей с человека. Сплав начинается 12 км выше с.Чемал, прохождение Берткинской шиверы, пор.Чемальские ворота, Эликмонарской шиверы.
+                                    Сплав по спокойным участкам реки с преодолением простых препятствий.  
+
                                 </p>                            
+                                <p class="mb-20">
+                                    Осмотр с воды достопримечательностей, таких как Чемальская ГЭС, «Козья тропа», о.Патмос, «Зубы Дракона»
+                                </p>
                             </div>
+<!--  -->
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-lg-6">
-<!--                     <<div class="clipped-img js-animate-shape-on-hover" data-target="path_about">>
-                        <div class="clipped-img__photo clipped-img__photo_left" style="background-image: url(/img/bg/8-services/serv-1-1.png);"></div>
-                        <div class="clipped-img__deco-big clipped-img__deco_serv-1-big"></div>
-                        <div class="clipped-img__deco-small clipped-img__deco_serv-1-small"></div>
-                    </div>
- -->
 
                     <div class="clipped-img js-animate-shape-on-hover" data-target="path_serv">
                         <div class="clipped-img__photo clipped-img__photo_left" style="background-image: url(/img/bg/8-services/serv-1-1.png);"></div>
@@ -738,49 +683,32 @@
                         <div class="tabs__links">
                             <div class="tab-link js-tab-link tab-link_active" data-target="1">
                                 <i class="tab-link__icon tab-link__icon_boat-hard"></i>
-                                Маршрут четыре порога
+                                Экстрим
                             </div>
                             <div class="tab-link js-tab-link" data-target="2">
                                 <i class="tab-link__icon tab-link__icon_boat-medi"></i>
-                                Маршрут 2 порога
+                                Прогулка
                             </div>
                             <div class="tab-link js-tab-link" data-target="3">
                                 <i class="tab-link__icon tab-link__icon_boat-easy"></i>
-                                Прогулочные маршруты
+                                Доставка
                             </div>
                         </div>
                         <div class="tabs__content">
                             <div class="tab-slide" id="tab-slide-4">
                                 <div class="row mb-20">
                                     <div class="col-4">
-                                        <i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;от <b>10 лет</b>
+                                        <i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;от <b>14 лет</b>
                                     </div>
                                     <div class="col-8">
-                                        <i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;<b>600-1000 рублей с человека</b>
+                                        <i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;<b>600 рублей с человека</b>
                                     </div>
                                 </div>
-                                <p class="mb-20">
-                                    Слайд 1.<br/>
-                                    Все прогулочные маршруты проходят по относительно спокойным участкам реки, мимо Чемальской ГЭС и о.Патмос. Единственное категорийное препятствие – порог Чемальские ворота, минимальной категории сложности.
-                                </p>
+                                <p class="mb-20">Допускаются дети от 14 лет и взрослые. Стоимость – 600 рублей с человека. </p>
                                 <p class="mb-0">
-                                    <b>Часовой маршрут</b>
+                                    15-20 минут на воде, море брызг и веселья, полное намокание участников.
                                 </p>
-                                <p class="mb-20">
-                                    600 рублей с человека. Это сплав либо с прохождением порога Чемальские ворота, мимо Чемальской ГЭС и о.Патмос, либо сплав по спокойному участку реки без прохождения порогов.
-                                </p>
-                                <p class="mb-0">
-                                    <b>Двухчасовой маршрут</b>
-                                </p>
-                                <p class="mb-20">
-                                    800 рублей с человека. Сплав начинается 12 км выше с.Чемал, прохождение Берткинской шиверы, пор.Чемальские ворота.
-                                </p>
-                                <p class="mb-0">
-                                    <b>Трехчасовой маршрут</b>
-                                </p>
-                                <p class="mb-20">
-                                    1000 рублей с человека. Сплав начинается 12 км выше с.Чемал, прохождение Берткинской шиверы, пор.Чемальские ворота, Эликмонарской шиверы.
-                                </p>
+                                
                             </div>
                             <div class="tab-slide tab-slide_hidden">
                                 <div class="row mb-20">
@@ -788,63 +716,31 @@
                                         <i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;от <b>9 лет</b>
                                     </div>
                                     <div class="col-8">
-                                        <i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;<b>500-900 рублей с человека</b>
+                                        <i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;<b>500 рублей с человека</b>
                                     </div>
                                 </div>
                                 <p class="mb-20">
-                                    Слайд 2.<br/>
-                                    Все прогулочные маршруты проходят по относительно спокойным участкам реки, мимо Чемальской ГЭС и о.Патмос. Единственное категорийное препятствие – порог Чемальские ворота, минимальной категории сложности.
-                                </p>
-                                <p class="mb-0">
-                                    <b>Часовой маршрут</b>
-                                </p>
-                                <p class="mb-20">
-                                    500 рублей с человека. Это сплав либо с прохождением порога Чемальские ворота, мимо Чемальской ГЭС и о.Патмос, либо сплав по спокойному участку реки без прохождения порогов.
-                                </p>
-                                <p class="mb-0">
-                                    <b>Двухчасовой маршрут</b>
-                                </p>
-                                <p class="mb-20">
-                                    800 рублей с человека. Сплав начинается 12 км выше с.Чемал, прохождение Берткинской шиверы, пор.Чемальские ворота.
-                                </p>
-                                <p class="mb-0">
-                                    <b>Трехчасовой маршрут</b>
-                                </p>
-                                <p class="mb-20">
-                                    1000 рублей с человека. Сплав начинается 12 км выше с.Чемал, прохождение Берткинской шиверы, пор.Чемальские ворота, Эликмонарской шиверы.
+                                    Допускаются дети и взрослые. Стоимость – 500 рублей с человека.
                                 </p>                            
+                                <p class="mb-0">
+                                    15-20 минут на воде, поездка с ветерком по спокойному участку реки без намокания.
+                                </p>
                             </div>
                             <div class="tab-slide tab-slide_hidden">
                                 <div class="row mb-20">
                                     <div class="col-4">
-                                        <i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;от <b>10 лет</b>
+                                        <i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;от <b>7 лет</b>
                                     </div>
                                     <div class="col-8">
-                                        <i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;<b>400-800 рублей с человека</b>
+                                        <i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;<b>100 рублей с человека</b>
                                     </div>
                                 </div>
                                 <p class="mb-20">
-                                    Слайд 3.<br/>
-                                    Все прогулочные маршруты проходят по относительно спокойным участкам реки, мимо Чемальской ГЭС и о.Патмос. Единственное категорийное препятствие – порог Чемальские ворота, минимальной категории сложности.
-                                </p>
-                                <p class="mb-0">
-                                    <b>Часовой маршрут</b>
-                                </p>
-                                <p class="mb-20">
-                                    400 рублей с человека. Это сплав либо с прохождением порога Чемальские ворота, мимо Чемальской ГЭС и о.Патмос, либо сплав по спокойному участку реки без прохождения порогов.
-                                </p>
-                                <p class="mb-0">
-                                    <b>Двухчасовой маршрут</b>
-                                </p>
-                                <p class="mb-20">
-                                    800 рублей с человека. Сплав начинается 12 км выше с.Чемал, прохождение Берткинской шиверы, пор.Чемальские ворота.
-                                </p>
-                                <p class="mb-0">
-                                    <b>Трехчасовой маршрут</b>
-                                </p>
-                                <p class="mb-20">
-                                    1000 рублей с человека. Сплав начинается 12 км выше с.Чемал, прохождение Берткинской шиверы, пор.Чемальские ворота, Эликмонарской шиверы.
+                                    Допускаются дети и взрослые. Стоимость – 100 рублей с человека.
                                 </p>                            
+                                <p class="mb-0">
+                                    Моторафт-такси, доставка с ГЭС до Патмоса и обратно на моторной лодке.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -1004,55 +900,65 @@
                 <div class="swiper-slide">
                     <div class="partner-thumb">
                         <div class="partner-thumb__photo">
-                            <img src="/img/bg/face-1.jpg" alt="">
+                            <img src="\img\person\maria.jpg" alt="">
                         </div>
                         <p class="text-big mb-20">Мария</p>
-                        <p>Хочется сказать огромное спасибо мастеРАфту!!! Вы просто супер!!!!Рекомендую всем)))) Спасибо большое за супер-супер сплав!!! Наш следующий сплав, только с МастеРАфт)))))))</p>
+                        <p>Хочется сказать огромное спасибо мастеРАфту!!! Вы просто супер!!!!Рекомендую всем)))) Спасибо большое за супер-супер сплав!!!  Наш следующий сплав, только с МастеРАфт)))))))</p>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="partner-thumb">
                         <div class="partner-thumb__photo">
-                            <img src="/img/bg/face-2.jpg" alt="">
+                            <img src="\img\person\anna.jpg" alt="">
                         </div>
                         <p class="text-big mb-20">Анна</p>
-                        <p>Хочется сказать огромное спасибо мастеРАфту!!! Вы просто супер!!!!Рекомендую всем)))) Спасибо большое за супер-супер сплав!!! Наш следующий сплав, только с МастеРАфт)))))))</p>
+                        <p>Спасибо огромное за сегодняшние эмоции, я до сих пор под впечатлением!!! Было мега круто!!!! Особенно переворот!!! Теперь я фанат сплавов ждите в следующем году Отдельное спасибо инструктору за профессионализм и познавательные истории.</p>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="partner-thumb">
                         <div class="partner-thumb__photo">
-                            <img src="/img/bg/face-3.jpg" alt="">
+                            <img src="\img\person\olga.jpg" alt="">
                         </div>
-                        <p class="text-big mb-20">Михаил</p>
-                        <p>Хочется сказать огромное спасибо мастеРАфту!!! Вы просто супер!!!!Рекомендую всем)))) Спасибо большое за супер-супер сплав!!! Наш следующий сплав, только с МастеРАфт)))))))</p>
+                        <p class="text-big mb-20">Ольга</p>
+                        <p>Спасибо, ребята! Весело, душевно, комфортно - идеально для первого подобного опыта, после которого хочется ЕЩЕ!!!</p>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="partner-thumb">
                         <div class="partner-thumb__photo">
-                            <img src="/img/bg/face-1.jpg" alt="">
+                            <img src="\img\person\lubov.jpg" alt="">
                         </div>
-                        <p class="text-big mb-20">Мария</p>
-                        <p>Хочется сказать огромное спасибо мастеРАфту!!! Вы просто супер!!!!Рекомендую всем)))) Спасибо большое за супер-супер сплав!!! Наш следующий сплав, только с МастеРАфт)))))))</p>
+                        <p class="text-big mb-20">Любовь</p>
+                        <p>Большое вам спасибо за эмоции, полученные от сплава! Хочется особенно отметить инструктора, который показал себя не только как профессионал своего дела, но и как великолепный экскурсовод с тонким чувством юмора и такта!</p>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="partner-thumb">
                         <div class="partner-thumb__photo">
-                            <img src="/img/bg/face-1.jpg" alt="">
+                            <img src="\img\person\tamara.jpg" alt="">
                         </div>
-                        <p class="text-big mb-20">Мария</p>
-                        <p>Хочется сказать огромное спасибо мастеРАфту!!! Вы просто супер!!!!Рекомендую всем)))) Спасибо большое за супер-супер сплав!!! Наш следующий сплав, только с МастеРАфт)))))))</p>
+                        <p class="text-big mb-20">Тамара</p>
+                        <p>Эмоций не оберешься! Уже приехали домой, но воспоминания терзают и разум велит вновь отправить тело на Алтай! Самое запоминающееся и эмоциональное времяпровождение за весь отдых!
+</p>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="partner-thumb">
                         <div class="partner-thumb__photo">
-                            <img src="/img/bg/face-1.jpg" alt="">
+                            <img src="\img\person\olga-2.jpg" alt="">
                         </div>
-                        <p class="text-big mb-20">Мария</p>
-                        <p>Хочется сказать огромное спасибо мастеРАфту!!! Вы просто супер!!!!Рекомендую всем)))) Спасибо большое за супер-супер сплав!!! Наш следующий сплав, только с МастеРАфт)))))))</p>
+                        <p class="text-big mb-20">Ольга</p>
+                        <p>Сегодня получили диск с видеозаписью нашего сплава - нахлынули воспоминания, сразу захотелось вернуться! Классные эмоции, обязательно повторим и только у вас! Спасибо!!!</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="partner-thumb">
+                        <div class="partner-thumb__photo">
+                            <img src="\img\person\julia.jpg" alt="">
+                        </div>
+                        <p class="text-big mb-20">Юлия</p>
+                        <p>Спасибо огромное за веселый и мокрый сплав)))))))</p>
                     </div>
                 </div>
             </div>
@@ -1079,29 +985,29 @@
 
     <div class="gallery">
         <div class="gallery-slide gallery-slide_small hidden-xl">
-            <a href="/img/bg/galllery-1.jpg" class="gallery-slide__photo gallery-slide__photo_small" data-lightbox="g1">
-                <div class="gallery-slide__photo-inner" style="background-image: url(/img/bg/galllery-1.jpg);"></div>
+            <a href="/img/photo/gal-1.jpg" class="gallery-slide__photo gallery-slide__photo_small" data-lightbox="g1">
+                <div class="gallery-slide__photo-inner" style="background-image: url(/img/photo/gal-1.jpg);"></div>
             </a>
-            <a href="/img/bg/galllery-2.jpg" href="/img/bg/galllery-2.jpg" class="gallery-slide__photo gallery-slide__photo_small" style="background-image: url(/img/bg/galllery-2.jpg);" data-lightbox="g1">
-                <div class="gallery-slide__photo-inner" style="background-image: url(/img/bg/galllery-2.jpg);"></div>
+            <a href="/img/bg/galllery-2.jpg" href="/img/bg/galllery-2.jpg" class="gallery-slide__photo gallery-slide__photo_small" style="background-image: url(/img/photo/gal-2.jpg);" data-lightbox="g1">
+                <div class="gallery-slide__photo-inner" style="background-image: url(/img/photo/gal-2.jpg);"></div>
             </a>
          </div>
         <div class="gallery-slide gallery-slide_big">
-            <a href="/img/bg/galllery-3.jpg" class="gallery-slide__photo gallery-slide__photo_big" style="background-image: url(/img/bg/galllery-3.jpg);" data-lightbox="g1">
-                <div class="gallery-slide__photo-inner" style="background-image: url(/img/bg/galllery-3.jpg);"></div>
+            <a href="/img/photo/gal-6.jpg" class="gallery-slide__photo gallery-slide__photo_big" style="background-image: url(/img/photo/gal-6.jpg);" data-lightbox="g1">
+                <div class="gallery-slide__photo-inner" style="background-image: url(/img/photo/gal-6.jpg);"></div>
             </a>
         </div>
         <div class="gallery-slide gallery-slide_small hidden-md">
-            <a href="/img/bg/galllery-4.jpg" class="gallery-slide__photo gallery-slide__photo_small" style="background-image: url(/img/bg/galllery-4.jpg);" data-lightbox="g1">
-                <div class="gallery-slide__photo-inner" style="background-image: url(/img/bg/galllery-4.jpg);"></div>
+            <a href="/img/photo/gal-4.jpg" class="gallery-slide__photo gallery-slide__photo_small" style="background-image: url(/img/photo/gal-4.jpg);" data-lightbox="g1">
+                <div class="gallery-slide__photo-inner" style="background-image: url(/img/photo/gal-4.jpg);"></div>
             </a>
-            <a href="/img/bg/galllery-5.jpg" class="gallery-slide__photo gallery-slide__photo_small" style="background-image: url(/img/bg/galllery-5.jpg);" data-lightbox="g1">
-                <div class="gallery-slide__photo-inner" style="background-image: url(/img/bg/galllery-5.jpg);"></div>
+            <a href="/img/photo/gal-5.jpg" class="gallery-slide__photo gallery-slide__photo_small" style="background-image: url(/img/photo/gal-5.jpg);" data-lightbox="g1">
+                <div class="gallery-slide__photo-inner" style="background-image: url(/img/photo/gal-5.jpg);"></div>
             </a>
         </div>
         <div class="gallery-slide gallery-slide_small">
-            <a href="/img/bg/galllery-6.jpg" href="/img/bg/galllery-2.jpg" class="gallery-slide__photo gallery-slide__photo_small" style="background-image: url(/img/bg/galllery-6.jpg);" data-lightbox="g1">
-                <div class="gallery-slide__photo-inner" style="background-image: url(/img/bg/galllery-6.jpg);"></div>
+            <a href="/img/photo/gal-3.jpg" class="gallery-slide__photo gallery-slide__photo_small" style="background-image: url(/img/photo/gal-3.jpg);" data-lightbox="g1">
+                <div class="gallery-slide__photo-inner" style="background-image: url(/img/photo/gal-3.jpg);"></div>
             </a>
             <div class="gallery-slide__photo gallery-slide__photo_small gallery-slide__btn">
                 <div class="text-center">
@@ -1111,11 +1017,11 @@
             </div>
         </div>
         <div class="gallery-slide gallery-slide_small hidden-lg">
-            <a href="/img/bg/galllery-8.jpg" class="gallery-slide__photo gallery-slide__photo_small" style="background-image: url(/img/bg/galllery-8.jpg);" data-lightbox="g1">
-                <div class="gallery-slide__photo-inner" style="background-image: url(/img/bg/galllery-8.jpg);"></div>
+            <a href="/img/photo/gal-7.jpg" class="gallery-slide__photo gallery-slide__photo_small" style="background-image: url(/img/photo/gal-7.jpg);" data-lightbox="g1">
+                <div class="gallery-slide__photo-inner" style="background-image: url(/img/photo/gal-7.jpg);"></div>
             </a>
-            <a href="/img/bg/galllery-8.jpg" class="gallery-slide__photo gallery-slide__photo_small" style="background-image: url(/img/bg/galllery-8.jpg);" data-lightbox="g1">
-                <div class="gallery-slide__photo-inner" style="background-image: url(/img/bg/galllery-8.jpg);"></div>
+            <a href="/img/photo/gal-8.jpg" class="gallery-slide__photo gallery-slide__photo_small" style="background-image: url(/img/photo/gal-8.jpg);" data-lightbox="g1">
+                <div class="gallery-slide__photo-inner" style="background-image: url(/img/photo/gal-8.jpg);"></div>
             </a>
         </div>
     </div>
@@ -1144,7 +1050,7 @@
                <div class="col-12 col-sm-6 col-md-3">
                     <div class="footer__links-contacts">
                        <a class="footer__link" href="#">info@masterraft.ru</a><br/>
-                       <a class="footer__link" href="tel:88002222222">8 800 222 22 22</a>
+                       <a class="footer__link" href="tel:+78005501722">+7-800-550-17-22</a>
                     </div>
                </div>
                <div class="col-12 col-sm-6 col-md-3">
@@ -1159,6 +1065,7 @@
                             <img src="/img/icons/i-vk.svg">
                         </a>
                     </div> 
+                    <a class="text-big footer__callback js-open-modal" href="" data-target="callback">Заказать звонок</a>
                 </div>
             </div>
        </div>
@@ -1458,10 +1365,15 @@ MOBILE MENU
             </div>
  -->
 
+		<div id="preloader">
+            <div class="preloader__center">
+                <span class="preloader__icon"></span>
+                <span class="preloader__water"><i></i></span>
+            </div>
+        </div>
 
 
-
-        <div class="to-top js-scroll-to-top"></div>
+        <!-- <div class="to-top js-scroll-to-top"></div> -->
 
         <div class="overlay overlay_modal js-modal-close"></div>
 

@@ -1,4 +1,15 @@
 
+
+
+$(window).load(function(){
+    $('#preloader').slideUp(400);
+    $('.wrapper').removeClass('h-no-scroll');
+});
+
+
+
+
+
 $(window).scroll(function() {
 
     $('.js-trigger-boat').each(function() {
@@ -290,7 +301,6 @@ $(document).ready(function(){
         let tabsTarget = $(this).data('tabs-target');
         let currentActiveTab = $('#'+tabsTarget).find('.tab-link_active').index();
 
-        console.log(currentActiveTab);
         if(currentActiveTab > 1) { //переход с третьего таба на первый
             // цвета табов
             $('#'+tabsTarget).find('.tab-link').eq(0).addClass('tab-link_active');
