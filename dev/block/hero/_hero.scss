@@ -24,7 +24,15 @@
 	&__slide {
 		@include flex-row(nowrap,flex-end,stretch);
 	}
+	&__slide.swiper-slide-active  {
+		.hero__photo {
+			// height: 94.5%;
+			// width: 70.5%;
+			opacity: 1;
+		}
+	}
 	&__photo {
+		opacity: 0;
 		position: relative;
 		height: 94%;
 		width: 70%;
