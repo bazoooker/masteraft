@@ -33,6 +33,7 @@
 		background-size: 25px;
 		background-repeat: no-repeat;
 		background-position: center center;
+		filter: grayscale(1);
 		transition: 450ms;
 	}
 }
@@ -40,6 +41,9 @@
 .tab-link.tab-link_active {
 	color: #02CBF8;
 	&::before {width: 45px; background: #02CBF8;}
+	.tab-link__icon {
+		filter: grayscale(0);
+	}
 }
 
 .tab-link__icon_raft-hard {background-image: url(/img/icons/icon-wave-1.png);}

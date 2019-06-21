@@ -26,8 +26,6 @@
 	}
 	&__slide.swiper-slide-active  {
 		.hero__photo {
-			// height: 94.5%;
-			// width: 70.5%;
 			opacity: 1;
 		}
 	}
@@ -108,11 +106,6 @@
 
 
 
-// .clip-me {
-// 	clip-path: url(#c1);
-// }
-
-
 
 @keyframes animPhoto {
 	0% {
@@ -132,9 +125,6 @@
 
 
 @media screen and (max-width: 1200px) 	{
-	// .hero {
-	// 	height: 900px;
-	// }
 	.hero__photo {
 		width: 90%;
 	}
@@ -145,7 +135,7 @@
 }
 @media screen and (max-width: 992px) 	{
 	.hero {
-		height: 950px;
+		height: 850px;
 	}
 }
 @media screen and (max-width: 768px) 	{}

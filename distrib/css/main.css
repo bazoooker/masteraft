@@ -6456,7 +6456,7 @@ html.lb-disable-scrolling {
 
 @media screen and (max-width: 992px) {
   .hero {
-    height: 950px; } }
+    height: 850px; } }
 
 @media screen and (max-width: 568px) {
   .hero::before {
@@ -7424,12 +7424,20 @@ html.lb-disable-scrolling {
   transform: translateX(50%);
   display: none; }
 
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  .modal {
+    height: 95%;
+    overflow-y: scroll; } }
+
 @media screen and (max-width: 768px) {
   .modal {
     top: 20px;
     width: 92%;
     overflow-y: scroll;
-    height: 92%;
+    height: 92%; }
+  .modal#write {
+    max-height: 520px; }
+  .modal#callback {
     max-height: 393px; }
   .modal__message_success,
   .modal__message_error {
@@ -7871,14 +7879,16 @@ html.lb-disable-scrolling {
     animation: animPhoto 4s ease-in infinite; }
 
 @media screen and (max-width: 768px) {
+  .clipped-img {
+    min-height: 350px; }
   .clipped-img__photo {
     width: 100%;
-    height: 100%;
+    height: 90%;
     background-position: center center; }
   .clipped-img__deco_about-big {
     right: 4%;
-    width: 120%;
-    height: 152%; } }
+    width: 100%;
+    height: 98%; } }
 
 .chart {
   position: relative;
@@ -8378,7 +8388,12 @@ html.lb-disable-scrolling {
 
 @media screen and (max-width: 768px) {
   .signup-form__label {
-    margin-bottom: 15px; } }
+    margin-bottom: 15px; }
+  .signup-form__floating-placeholder.float {
+    -webkit-transition: 0ms;
+    -o-transition: 0ms;
+    transition: 0ms;
+    opacity: 0; } }
 
 .tabs {
   width: 100%; }
@@ -8469,6 +8484,8 @@ html.lb-disable-scrolling {
     background-size: 25px;
     background-repeat: no-repeat;
     background-position: center center;
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
     -webkit-transition: 450ms;
     -o-transition: 450ms;
     transition: 450ms; }
@@ -8478,6 +8495,9 @@ html.lb-disable-scrolling {
   .tab-link.tab-link_active::before {
     width: 45px;
     background: #02CBF8; }
+  .tab-link.tab-link_active .tab-link__icon {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0); }
 
 .tab-link__icon_raft-hard {
   background-image: url(/img/icons/icon-wave-1.png); }

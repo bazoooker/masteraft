@@ -122,6 +122,12 @@
 	.signup-form__label {
 		margin-bottom: 15px;
 	}
+	.signup-form__floating-placeholder {
+		&.float {
+			transition: 0ms;
+			opacity: 0;
+		}
+	}
 }
 @media screen and (max-width: 568px) 	{}
 @media screen and (max-width: 414px) 	{}
