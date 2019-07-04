@@ -63,13 +63,20 @@ $(window).scroll(function() {
 
 });
 
+var getNewPhotos = function(){
+    $(".gallerycontainer").load( "/ajax/gallery.php", function() {
+        setTimeout( function() {
+            $('#gallery').removeClass('reload');
+        },1500);
+    });
+};
 
-
-
+function reloadgallery(){
+    $('#gallery').addClass('reload');
+        setTimeout(getNewPhotos,600);
+};
 
 $(document).ready(function(){
-
-        // читать далее
         $('.js-read-more').click(function(e) {
             e.preventDefault();
             if( !$(this).hasClass('read-more__link_active') ) {
@@ -105,7 +112,7 @@ $(document).ready(function(){
 
     new WOW().init();
     $.stellar();
-    $('.js-mask-tel').mask('+7 (999) 999-99-99');
+    $('.js-mask-tel').mask('+7 (999) 999-99-99', {placeholder:"_"});
 
     // --------------------
     // анимация фигур
@@ -153,11 +160,11 @@ $(document).ready(function(){
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
           ['Task', 'Hours per Day'],
-          ['Пешие маршруты', 2008],
-          ['Конные маршруты', 1683],
-          ['Простые сплавы', 507],
-          ['Солжные рафт-сплавы', 7129],
-          ['Маршруты на моторных лодках', 6873]
+          ['Маршруты на моторных лодках', 6874],
+          ['Доставка ГЭС-Патмос и обратно', 7129],
+          ['Маршрут четыре порога', 507],
+          ['Маршрут два порога', 1683],
+          ['Прогулочные маршруты', 2008]
         ]);
 
         var options = {
@@ -461,17 +468,6 @@ $(document).ready(function(){
     //     }
     // }
 
-        $('.js-show-success-message').click(function() {
-            var timer;
-            $('.message').addClass('message_visible');
-            clearTimeout(timer);
-
-
-            timer = setTimeout( function() {
-                $('.modal').removeClass('modal_active');
-                $('.overlay_modal').fadeOut(400); 
-            }, 2000);
-        });
 
 
 
@@ -609,7 +605,92 @@ $(document).ready(function(){
 
 
 $('.js-show-signup-message-success').on('click', function(){
-    $(this).html('<i class="fa fa-check" aria-hidden="true"></i>&nbsp;&nbsp;Отправлено!')
+
+	var form=$('.signup-form');
+        $(form).ajaxSubmit({  
+            url: "/ajax/"+$(form).data('file')+".php",
+            data: $(form).serialize(),
+            dataType: "JSON",
+            type: "POST",
+            success: function(data){
+                if(data.done) {
+			$('.js-show-signup-message-success').html('<i class="fa fa-check" aria-hidden="true"></i>&nbsp;&nbsp;Отправлено!');
+			$('.signup-form').find('input[type=text]').val('');
+                } else {
+			$('.signup-form').find('.modal-errors').show();
+			$('.signup-form').find('.modal-errors').html(data.message);
+			setTimeout("$('.signup-form').find('.modal-errors').hide()",1000);
+                }
+            },
+            complete: function(){
+            }
+        });
+	return false;
+});
+$('.modal#callback .js-show-success-message').on('click', function(){
+
+	var form=$('.modal#callback form');
+        $(form).ajaxSubmit({  
+            url: "/ajax/"+$(form).data('file')+".php",
+            data: $(form).serialize(),
+            dataType: "JSON",
+            type: "POST",
+            success: function(data){
+                if(data.done) {
+			$('.modal#callback form').find('input[type=text]').val('');
+		        var timer;
+		            $('.message').addClass('message_visible');
+		            clearTimeout(timer);
+
+
+		            timer = setTimeout( function() {
+	                $('.modal').removeClass('modal_active');
+	                $('.overlay_modal').fadeOut(400); 
+	            }, 2000);
+
+                } else {
+			$('.modal#callback form').find('.modal-errors').show();
+			$('.modal#callback form').find('.modal-errors').html(data.message);
+			setTimeout("$('.modal#callback form').find('.modal-errors').hide()",1000);
+                }
+            },
+            complete: function(){
+            }
+        });
+	return false;
+});
+
+$('.modal#write .js-show-success-message').on('click', function(){
+
+	var form=$('.modal#write form');
+        $(form).ajaxSubmit({  
+            url: "/ajax/"+$(form).data('file')+".php",
+            data: $(form).serialize(),
+            dataType: "JSON",
+            type: "POST",
+            success: function(data){
+                if(data.done) {
+			$('.modal#write form').find('input[type=text]').val('');
+		        var timer;
+		            $('.message').addClass('message_visible');
+		            clearTimeout(timer);
+
+
+		            timer = setTimeout( function() {
+	                $('.modal').removeClass('modal_active');
+	                $('.overlay_modal').fadeOut(400); 
+	            }, 2000);
+
+                } else {
+			$('.modal#write form').find('.modal-errors').show();
+			$('.modal#write form').find('.modal-errors').html(data.message);
+			setTimeout("$('.modal#write form').find('.modal-errors').hide()",1000);
+                }
+            },
+            complete: function(){
+            }
+        });
+	return false;
 });
 
  
